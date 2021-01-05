@@ -1,0 +1,45 @@
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color:#999999;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+  }
+
+  ::-webkit-scrollbar {
+    width:7px;
+    height:5px;
+    background-color:#ffffff;
+  }
+
+@font-face {
+  font-family: "Ogg";
+  src: url("/fonts/Ogg.ttf") format("truetype");
+}
+
+body {
+  background-image: url(../images/background.png);
+  background-position: center top;
+  background-width: 100% auto;
+  background-color: #FFFBFF;
+  margin: auto;
+  width: 80%;
+  max-width: 1125px;
+  min-width: 300px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+}
+
+a{
+  font-weight: 500;
+  text-decoration: underline;
+  color: #BF8CFF;
+}
+
+h1{
+  font-family: "Ogg";
+  color: black;
+  font-size: 60px;
+  font-weight: 400;
+}
