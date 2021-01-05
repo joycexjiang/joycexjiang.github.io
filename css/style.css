@@ -7,7 +7,7 @@
   ::-webkit-scrollbar {
     width:7px;
     height:5px;
-    background-color:#ffffff;
+    background-color:none;
   }
 
 @font-face {
@@ -18,6 +18,7 @@
 body {
   background-image: url(../images/background.png);
   background-position: center top;
+  background-repeat: no-repeat;
   background-width: 100% auto;
   background-color: #FFFBFF;
   margin: auto;
@@ -54,7 +55,54 @@ h3{
   margin-left: 550px;
 }
 
+.hoverline {
+  background-image: linear-gradient(120deg, #FFE2B7 0%, #FCDFFF 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0px;
+  background-position: 0 57%;
+  left: -2.5px;
+  transition: background-size 0.25s ease-in;
+}
+.hoverline:hover {
+  background-size: 100% 10px;
+  background-position: 0 57%;
+}
+
 .animoji{
   margin-left: 870px;
   margin-top: -230px;
+}
+
+nav{
+    background: transparent;
+    width: 100%;
+    }
+
+nav li{
+    display:inline-block;
+
+}
+
+nav li a{
+    color: #343434;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    display:block;
+    padding: 44px 62px;
+    transition: 1s;
+}
+
+nav li a:hover{
+    color:#CCDEF9;
+    transition: 1s;
+}
+
+.logo{
+  height-size: 70px;
+}
+
+.logo:hover{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
