@@ -7,7 +7,7 @@ x  ::-webkit-scrollbar-thumb:vertical {
   ::-webkit-scrollbar {
     width:7px;
     height:5px;
-    background-color:none;
+    background-color:#ffffff;
   }
 
 @font-face {
@@ -42,6 +42,14 @@ h1{
   font-family: "Ogg";
   color: black;
   font-size: 70px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+h2{
+  font-family: "Ogg";
+  color: black;
+  font-size: 50px;
   font-weight: 400;
   line-height: 15px;
 }
