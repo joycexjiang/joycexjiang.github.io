@@ -1,14 +1,15 @@
-x  ::-webkit-scrollbar-thumb:vertical {
-    background-color:#999999;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-  }
+::-webkit-scrollbar-thumb:vertical {
+  background-color:#1f1e1e;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+}
 
-  ::-webkit-scrollbar {
-    width:7px;
-    height:5px;
-    background-color:#ffffff;
-  }
+::-webkit-scrollbar {
+  width:7px;
+  height:5px;
+  background-image:linear-gradient(120deg, #FFE2B7 0%, #FCDFFF 100%);;
+}
+
 
 @font-face {
   font-family: "Ogg";
@@ -84,10 +85,13 @@ h3{
 nav{
     background: transparent;
     width: 100%;
+    text-align:center;
     }
 
 nav li{
     display:inline-block;
+    /*display:block;*/
+    padding: 40px 50px;
 }
 
 nav li a{
@@ -97,10 +101,8 @@ nav li a{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    display:block;
-    padding: 44px 62px;
-    margin-right:20px;
     transition: 1s;
+    top:-44px;
 }
 
 nav li a:hover{
@@ -109,10 +111,66 @@ nav li a:hover{
 }
 
 .logo{
-  height-size: 70px;
+  padding-right: 280px;
+  margin-left:-45px;
+  /*padding-top:44px;*/
 }
 
-.logo:hover{
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+.logo img{
+  position: absolute;
+  height:80px;
+  margin-top:15px;
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+}
+
+.logo img:hover{
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.resume_btn{
+  font-size: 18px;
+  left:50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  border: 1px solid #000;
+  background: transparent;
+  position:relative;
+  width: 147px;
+  height: 44px;
+  transition:800ms ease all;
+}
+
+.resume_btn a{
+  color: #343434;
+  text-decoration: none;
+}
+
+.resume_btn:hover{
+  background:#000;
+}
+
+.resume_btn a:hover{
+  color:#fff;
+  text-decoration: none;
+}
+
+#portfoliocases{
+  align-content:center;
+  height: auto;
+  border:1px black;
 }
