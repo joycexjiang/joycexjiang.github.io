@@ -1,5 +1,5 @@
 ::-webkit-scrollbar-thumb:vertical {
-  background-color:#1f1e1e;
+  background-color:#eee;
   -moz-border-radius:10px;
   -webkit-border-radius:10px;
 }
@@ -58,6 +58,7 @@ h2{
   color: black;
   font-size: 50px;
   font-weight: 400;
+  display:inline-block;
   line-height: 15px;
 }
 
@@ -70,6 +71,7 @@ h3{
   margin-left: 550px;
 }
 
+
 .hoverline {
   background-image: linear-gradient(120deg, #FFE2B7 0%, #FCDFFF 100%);
   background-repeat: no-repeat;
@@ -79,12 +81,14 @@ h3{
   transition: background-size 0.25s ease-in;
 }
 .hoverline:hover {
-  background-size: 100% 10px;
+  background-size: 100% 15px;
   background-position: 0 57%;
 }
 
 .animoji{
   margin-left: 870px;
+  width:186px;
+  height:220px;
   margin-top: -230px;
 }
 
@@ -117,8 +121,8 @@ nav li a:hover{
 }
 
 .logo{
-  padding-right: 280px;
-  margin-left:-45px;
+  padding-right: 300px;
+  margin-left:-60px;
   /*padding-top:44px;*/
 }
 
@@ -126,24 +130,24 @@ nav li a:hover{
   position: absolute;
   height:80px;
   margin-top:15px;
-  transition: 0.70s;
-  -webkit-transition: 0.70s;
-  -moz-transition: 0.70s;
-  -ms-transition: 0.70s;
-  -o-transition: 0.70s;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
 }
 
 .logo img:hover{
-  transition: 0.70s;
-  -webkit-transition: 0.70s;
-  -moz-transition: 0.70s;
-  -ms-transition: 0.70s;
-  -o-transition: 0.70s;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .resume_btn{
@@ -179,5 +183,33 @@ nav li a:hover{
 #portfoliocases{
   align-content:center;
   height: auto;
-  border:1px black;
+  max-width: 100%;
+  border:1px solid black;
 }
+
+.lines{
+  display:inline;
+  width: 40px;
+  padding:5px;
+  height:30px;
+  border: 1px solid red;
+}
+
+.titlesOfproject{
+  font-family: "Ogg";
+  color: black;
+  font-size: 50px;
+  font-weight: 400;
+  display:inline;
+  text-align:left;
+  padding:10px;
+  top:-20px;
+  border: 1px solid black;
+}
+}
+.typeofproject {
+  display:inline;
+  border: 3px solid pink;
+  text-align:right;
+}
+

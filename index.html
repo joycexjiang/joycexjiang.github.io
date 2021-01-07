@@ -6,8 +6,8 @@
 		<!-- The href for the CSS will be different depending on
         whether you put the CSS file in a new directory, which is
         what I've done here.    type text css file  link-->
-    	<link rel="stylesheet" type="text/css" href="./css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<!-- trap bunny BUBBLES -->
     	<script type="text/javascript">
 // <![CDATA[
@@ -205,6 +205,74 @@ function createDiv(height, width) {
 // ]]>
 </script>
 
+<!-- news -->
+<script type="text/javascript">
+// <![CDATA[
+var news=Array("ASPIRING PRODUCT DESIGNER ‣ she/her", "🤍 STUDENT AT BARNARD COLLEGE", "🤍 FIRST GENERATION CHINESE-AMERICAN", "📍 LOCATED IN NYC");
+var cursor="_"; // set cursor
+var delay=5; // seconds between each news item
+
+/***************************\
+* News Ticker Text Effect   *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+var newsp, cursp, flash, item=0;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(teleprint);
+
+function teleprint () { if (document.getElementById) {
+  var span=document.getElementById("news");
+  while (span.childNodes.length) span.removeChild(span.childNodes[0]);
+  delay*=1000;
+  newsp=document.createElement("span");
+  cursp=document.createElement("span");
+  cursp.appendChild(document.createTextNode(String.fromCharCode(160)+cursor));
+  span.appendChild(newsp);
+  span.appendChild(cursp);
+  ticker();
+}}
+
+function ticker() {
+  var i;
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[item].substring(0,1)));
+  for (i=1; i<news[item].length; i++) setTimeout('newsp.firstChild.nodeValue="'+news[item].substring(0, i+1)+'"', 100*i);
+  if (news[item].indexOf("www")!=-1) setTimeout('linkit('+item+')', 100*i);
+  setTimeout('flash=setInterval("cursp.style.visibility=(cursp.style.visibility==\'visible\')?\'hidden\':\'visible\'", 234)', 100*i)
+  setTimeout('clearInterval(flash)', delay);
+  setTimeout('cursp.style.visibility="visible"', delay);
+  setTimeout('ticker()', delay);
+  item=++item%news.length;
+}
+
+function linkit(q) {
+  var a,p,e,l;
+  p=news[q].indexOf("www");
+  e=news[q].indexOf(" ", p);
+  if (e==-1) e=news[q].length;
+  l=news[q].substring(p, e);
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[q].substring(0, p)));
+  a=document.createElement("a");
+  a.href="http://"+l;
+  a.appendChild(document.createTextNode(l));
+  newsp.appendChild(a);
+  newsp.appendChild(document.createTextNode(news[q].substring(e)));
+}
+// ]]>
+</script>
+
     	<!-- fonts -->
     	<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -217,13 +285,10 @@ function createDiv(height, width) {
 	</head>
 
 	<body>
-
-    <!-- scriptsrc-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="/js/index.js"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
     <nav>
-    <span class="logo"> <img src="images/logo.png" alt="logo"> </span>
+    <span class="logo"> <a href="/"><img src="images/logo.png" alt="logo"></a> </span>
     <li><a href="">WORK</a></li>
     <li><a href="" title="graphic design, photography">PLAYGROUND</a></li>
     <li><a href="">ABOUT</a></li>
@@ -232,10 +297,8 @@ function createDiv(height, width) {
   </nav>
 
 		<h1> Nice to  meet you, <p class="headtext2"><span class="hoverline">I'm Joyce.</span></p></h1>
-		<p class="animoji"><img src="images/animoji.webp" alt="my animoji"></p>
-
-		<center><img src="images/pfp.jpg" height=400px alt="A picture of me"></center>
-		<h3>ASPIRING PRODUCT DESIGNER ‣ she/her  ‣ NYC</h3>
+		<p class="animoji"><img src="images/animoji.png" alt="my animoji"></p>
+    <h3 id="news">ASPIRING PRODUCT DESIGNER ‣ she/her  ‣ NYC</h3>
 
 		<p>👋 I'm a current FLI first year student at <strong>Barnard College of Columbia University</strong> pursuing a B.A in <b>Cognitive Science</b> and minor in Computer Science. I'm an aspiring Product Designer passionate about ethical and accessible Human-Computer Interaction, designing for social good, tech ethics surrounding AI/algorithm bias, and the intersection of public policy and tech.</p>
 
@@ -245,11 +308,17 @@ function createDiv(height, width) {
 
 		<p> ☁️  Over the holidays, I worked on my first UI/UX Design case study - <strong><a href="https://jjoyceny02.wixsite.com/my-site/netflix-wrapped-case-study">"Netflix Wrapped"</a></strong>, similar to the concept of "Spotify Wrapped" with the main goal to visualize the yearly review data that provide a story of the hours you spent with the company, bridging the gap between the company and consumer trust. <p>
 
-    <center><a href=""><img src="images/arrow.png" height=30px alt="arrow"></a></center>
+    <center><a href="#portfoliocases"><img src="images/arrow.png" height=30px alt="arrow"></a></center>
+
+
+    <center><img src="images/pfp.jpg" height=400px alt="A picture of me"></center>
 
     <div id="portfoliocases">
-      <h2>Netflix Wrapped</h2> <hr>
+      <span class="titlesOfproject">Netflix Wrapped</span>
+      <span class="lines"></span>
+      <span class="typeofproject"> hi<img src="images/type of project.png" alt="type of project"></span>
     </div>
+
 
 		<!-- contents-->
 	</body>
