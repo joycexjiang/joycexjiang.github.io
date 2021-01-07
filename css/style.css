@@ -189,27 +189,66 @@ nav li a:hover{
 
 .lines{
   display:inline;
-  width: 40px;
+  width: 20px;
   padding:5px;
-  height:30px;
-  border: 1px solid red;
+  height:0px;
+  border: 1px dotted red;
 }
 
-.titlesOfproject{
+.titles_project{
   font-family: "Ogg";
   color: black;
   font-size: 50px;
   font-weight: 400;
   display:inline;
   text-align:left;
-  padding:10px;
-  top:-20px;
+  margin-top:-220px;
   border: 1px solid black;
 }
-}
-.typeofproject {
+
+.type_project {
   display:inline;
   border: 3px solid pink;
   text-align:right;
+  margin-left:575px;
+}
+
+.mockups img{
+  width:60%;
+  display: inline;
+  align-content:left;
+  border: 3px solid green;
+}
+.content{
+  display: inline;
+  height: auto;
+  width: 40%;
+  border:1px solid black;
+}
+
+.filters_btn{
+  font-family: 'Inter', sans-serif;
+  font-size:14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  border: 1px solid #343434;
+  background: none;
+  color: #343434;
+  position:relative;
+  width: 147px;
+  height: 32px;
+  transition:800ms ease all;
+  padding: 7px 25px;
+}
+
+.filters_btn a{
+  text-decoration: none;
+}
+
+.filters_btn:hover{
+  background: #F3F3F3;
+  border: 1px solid #F3F3F3;
+  transition:800ms ease all;
 }
 
