@@ -27,6 +27,7 @@ body {
   max-width: 1125px;
   min-width: 300px;
   padding-top: 10px;
+  color: #161616;
   padding-bottom: 80px;
   text-align: left;
   font-family: 'Inter', sans-serif;
@@ -172,7 +173,7 @@ nav li a:hover{
   font-weight: 400;
   letter-spacing: 1px;
   border-radius: 25px;
-  border: 1px solid #000;
+  border: 1px solid #343434;
   background: transparent;
   position:relative;
   width: 147px;
@@ -186,7 +187,7 @@ nav li a:hover{
 }
 
 .resume_btn:hover{
-  background:#000;
+  background:#343434;
   color:#fff;
 }
 
