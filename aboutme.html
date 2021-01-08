@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Portfolio | Joyce Jiang</title>
-		<link rel="shortcut icon" href="images/logo.png">
-		<!-- The href for the CSS will be different depending on
+  <head>
+    <title>About Me | Joyce Jiang</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <!-- The href for the CSS will be different depending on
         whether you put the CSS file in a new directory, which is
         what I've done here.    type text css file  link-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<!-- trap bunny BUBBLES -->
-    	<script type="text/javascript">
+      <!-- trap bunny BUBBLES -->
+      <script type="text/javascript">
 // <![CDATA[
 var colours=new Array("#a6f", "#60f", "#60f", "#a6f", "#ccc"); // colours for top, right, bottom and left borders and background of bubbles
 var bubbles=26; // maximum number of bubbles on screen
@@ -48,7 +48,7 @@ function buble() { if (document.getElementById) {
   for (i=0; i<bubbles; i++) {
     rats=createDiv("3px", "3px");
     rats.style.visibility="hidden";
-	rats.style.zIndex=(over_or_under=="over")?"1001":"0";
+  rats.style.zIndex=(over_or_under=="over")?"1001":"0";
 
     div=createDiv("auto", "auto");
     rats.appendChild(div);
@@ -121,10 +121,10 @@ function update_bubb(i) {
     bubby[i]-=bubbs[i]/2+i%2;
     bubbx[i]+=(i%5-2)/5;
     if (bubby[i]>sdown && bubbx[i]>sleft && bubbx[i]<sleft+swide+bubbs[i]) {
-	  if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
-		bubb[i].width=bubbs[i]+"px";
-		bubb[i].height=bubbs[i]+"px";
-	  }
+    if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
+    bubb[i].width=bubbs[i]+"px";
+    bubb[i].height=bubbs[i]+"px";
+    }
       bubb[i].top=bubby[i]+"px";
       bubb[i].left=bubbx[i]+"px";
     }
@@ -273,81 +273,54 @@ function linkit(q) {
 // ]]>
 </script>
 
-    	<!-- fonts -->
-    	<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
 
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+      <!-- fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
 
-	</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
 
-	<body>
+  </head>
+
+
+  <body>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./js/index.js"></script>
 
+
     <!-- navigation bar -->
     <nav>
-    <span class="logo"> <a href="/"><img src="images/logo.png" alt="logo"></a> </span>
+    <span class="logo"> <a href="http://joycexjiang.github.io"><img src="images/logo.png" alt="logo"></a> </span>
     <li><a href="https://jjoyceny02.wixsite.com/my-site">WORK</a></li>
     <li><a href="https://jjoyceny02.wixsite.com/my-site/playground" title="graphic design, photography">PLAYGROUND</a></li>
-    <li><a href="./aboutme.html">ABOUT</a></li>
+    <li><a href="/about.html">ABOUT</a></li>
 
     <button class="resume_btn"><a href="https://drive.google.com/file/u/1/d/1vBrd57PTH8WHuFyKwIs-z6z4voAlLkkp/view?usp=sharing" target="_blank" >RESUME</a></button>
   </nav>
 
 <!-- main page -->
-		<h1> Nice to  meet you, <p class="headtext2"><span class="hoverline">I'm Joyce.</span></p></h1>
-		<p class="animoji"><img src="images/animoji.png" alt="my animoji"></p>
-    <h3 id="news">ASPIRING PRODUCT DESIGNER ‣ she/her  ‣ NYC</h3>
+    <span class="aboutmecontent">
+    <h2> hi there!</h2>
+  
+    <p>👋 I'm a current FLI first year student at <strong>Barnard College of Columbia University</strong> pursuing a B.A in <b>Cognitive Science</b> and minor in Computer Science. I'm an aspiring Product Designer passionate about ethical and accessible Human-Computer Interaction, designing for social good, tech ethics surrounding AI/algorithm bias, and the intersection of public policy and tech ☁️</p>
+    <br>
 
-		<p>👋 I'm a current FLI first year student at <strong>Barnard College of Columbia University</strong> pursuing a B.A in <b>Cognitive Science</b> and minor in Computer Science. I'm an aspiring Product Designer passionate about ethical and accessible Human-Computer Interaction, designing for social good, tech ethics surrounding AI/algorithm bias, and the intersection of public policy and tech.</p>
+    <p> Previously, I worked as a Political Fellow for Qasim Rashid's 28th Virginia state Senate race. I’ve formerly organized and worked on multiple youth-led organizations. I’m also a freelance writer and photographer passionate about political advocacy and sharing the stories of young women of color and our experiences in this world.</p>
+    <br>
+ 
 
-		<p> Previously, I worked as a Political Fellow for Qasim Rashid's 28th Virginia state Senate race. I’ve formerly organized and worked on multiple youth-led organizations. I’m also a freelance writer and photographer passionate about political advocacy and sharing the stories of young women of color and our experiences in this world.</p>
+    </span>
 
-		<p> <a href="https://jjoyceny02.wixsite.com/my-site">Here</a>'s a link to my portfolio page!</p>
+    <span class="aboutme"><img src="images/pfp.jpg" width=30% alt="a picture of me"></span>
 
-		<p> ☁️  Over the holidays, I worked on my first UI/UX Design case study - <strong><a href="https://jjoyceny02.wixsite.com/my-site/netflix-wrapped-case-study">"Netflix Wrapped"</a></strong>, similar to the concept of "Spotify Wrapped" with the main goal to visualize the yearly review data that provide a story of the hours you spent with the company, bridging the gap between the company and consumer trust. <p>
+   <h4>taurus</h4> <hr> <p style="font-size:13px;">moon in pisces, cancer rising. with a gemini stellium :D</p>
+   <h4>slytherin</h4>
 
-    <center><a href="https://jjoyceny02.wixsite.com/my-site"><img src="images/arrow.png" height=30px alt="arrow"></a></center>
-<p><p></p></p>
-<!--
+  </body>
 
-    <div id="portfoliocases">
-      <span class="titles_project">Netflix Wrapped</span>
-      <spam class="lines"></span>
-      <span class="type_project"><img src="images/type of project.png" alt="type of project"></span>
-      
-      <br>
 
-      <span class="mockups"><img src="images/netflix mockups.png"></span>
-
-      <div id="content">
-        <span class="filters_btn">+ UI/UX Design</span>
-        <span class="filters_btn">+ Prototyping</span>
-        <span class="filters_btn">+ InVision</span>
-        <span class="filters_btn">+ Figma</span>
-      </div>
-    </div>
--->
-
-		<!-- contents-->
-	</body>
-<br><br><br><br>
-<footer>
-  <span class="hoverline"><h2 style="margin-top:-5px;">Get in touch!</h2></span>
-
-<span class="footerabout">
-  <p>Thank you so much for visiting my portfolio! You can learn more about me <a style="color:#9FC6FF;" href="/aboutme.html"><strong>here</strong></a>. I’m also happy to chat! Say ‘hello’ at my <a style="color:#99FC6FF;" href="https://www.linkedin.com/in/joyce--jiang/"><b>LinkedIn</b></a> or my <a href="mailto:jj3115@columbia.edu">email.</a><br><br>
-For more info on my work, here is my <a href="https://drive.google.com/file/u/1/d/1vBrd57PTH8WHuFyKwIs-z6z4voAlLkkp/view?usp=sharing" target="_blank" >resume.</a></p></span>
-<br>
-
-<div id="creds">
-  <h3 style="font-size:18px;">Personally designed, coded, and developed with 💖</h3>
-  <p style="font-size:12px; font-weight:200;">© 2020 Joyce Jiang. All Rights Reserved.</p>
-</div>
-
-</footer>
 </html>
