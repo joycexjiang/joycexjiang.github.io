@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="author" content="Joyce Jiang, student at Barnard College">
+
+		<title>Joyce Jiang | Portfolio</title>
+		<link rel="shortcut icon" href="http://i12.photobucket.com/albums/a213/superkate_2468/favicon-3ico-1.gif">
+		<!-- The href for the CSS will be different depending on
+        whether you put the CSS file in a new directory, which is
+        what I've done here.    type text css file  link-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- trap bunny BUBBLES -->
+    	<script type="text/javascript">
+// <![CDATA[
+var colours=new Array("#a6f", "#60f", "#60f", "#a6f", "#ccc"); // colours for top, right, bottom and left borders and background of bubbles
+var bubbles=26; // maximum number of bubbles on screen
+var over_or_under="over"; // set to "over" for bubbles to always be on top, or "under" to allow them to float behind other objects
+
+/****************************
+* JavaScript Bubble Cursor  *
+*(c)2010-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var bubb=new Array();
+var bubbx=new Array();
+var bubby=new Array();
+var bubbs=new Array();
+var sploosh=false;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(buble);
+
+function buble() { if (document.getElementById) {
+  var i, rats, div;
+  for (i=0; i<bubbles; i++) {
+    rats=createDiv("3px", "3px");
+    rats.style.visibility="hidden";
+	rats.style.zIndex=(over_or_under=="over")?"1001":"0";
+
+    div=createDiv("auto", "auto");
+    rats.appendChild(div);
+    div=div.style;
+    div.top="1px";
+    div.left="0px";
+    div.bottom="1px";
+    div.right="0px";
+    div.borderLeft="1px solid "+colours[3];
+    div.borderRight="1px solid "+colours[1];
+
+    div=createDiv("auto", "auto");
+    rats.appendChild(div);
+    div=div.style;
+    div.top="0px";
+    div.left="1px";
+    div.right="1px";
+    div.bottom="0px"
+    div.borderTop="1px solid "+colours[0];
+    div.borderBottom="1px solid "+colours[2];
+
+    div=createDiv("auto", "auto");
+    rats.appendChild(div);
+    div=div.style;
+    div.left="1px";
+    div.right="1px";
+    div.bottom="1px";
+    div.top="1px";
+    div.backgroundColor=colours[4];
+    if (navigator.appName=="Microsoft Internet Explorer") div.filter="alpha(opacity=50)";
+    else div.opacity=0.5;
+    document.body.appendChild(rats);
+    bubb[i]=rats.style;
+  }
+  set_scroll();
+  set_width();
+  bubble();
+}}
+
+function bubble() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<bubbles; c++) if (!bubby[c]) {
+      bubb[c].left=(bubbx[c]=x)+"px";
+      bubb[c].top=(bubby[c]=y-3)+"px";
+      bubb[c].width="3px";
+      bubb[c].height="3px"
+      bubb[c].visibility="visible";
+      bubbs[c]=3;
+      break;
+    }
+  }
+  for (c=0; c<bubbles; c++) if (bubby[c]) update_bubb(c);
+  setTimeout("bubble()", 40);
+}
+
+document.onmousedown=splash;
+document.onmouseup=function(){clearTimeout(sploosh);};
+
+function splash() {
+  ox=-1;
+  oy=-1;
+  sploosh=setTimeout('splash()', 100);
+}
+
+function update_bubb(i) {
+  if (bubby[i]) {
+    bubby[i]-=bubbs[i]/2+i%2;
+    bubbx[i]+=(i%5-2)/5;
+    if (bubby[i]>sdown && bubbx[i]>sleft && bubbx[i]<sleft+swide+bubbs[i]) {
+	  if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
+		bubb[i].width=bubbs[i]+"px";
+		bubb[i].height=bubbs[i]+"px";
+	  }
+      bubb[i].top=bubby[i]+"px";
+      bubb[i].left=bubbx[i]+"px";
+    }
+    else {
+      bubb[i].visibility="hidden";
+      bubby[i]=0;
+      return;
+    }
+  }
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+
+<!-- news -->
+<script type="text/javascript">
+// <![CDATA[
+var news=Array("🦋 ASPIRING PRODUCT DESIGNER/UX ENGINEER ‣ she/they", "💡 STUDENT AT BARNARD COLLEGE", "🤍 FIRST GENERATION CHINESE-AMERICAN", "📍 LOCATED IN NYC");
+var cursor="_"; // set cursor
+var delay=5; // seconds between each news item
+
+/***************************\
+* News Ticker Text Effect   *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+var newsp, cursp, flash, item=0;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(teleprint);
+
+function teleprint () { if (document.getElementById) {
+  var span=document.getElementById("news");
+  while (span.childNodes.length) span.removeChild(span.childNodes[0]);
+  delay*=1000;
+  newsp=document.createElement("span");
+  cursp=document.createElement("span");
+  cursp.appendChild(document.createTextNode(String.fromCharCode(160)+cursor));
+  span.appendChild(newsp);
+  span.appendChild(cursp);
+  ticker();
+}}
+
+function ticker() {
+  var i;
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[item].substring(0,1)));
+  for (i=1; i<news[item].length; i++) setTimeout('newsp.firstChild.nodeValue="'+news[item].substring(0, i+1)+'"', 100*i);
+  if (news[item].indexOf("www")!=-1) setTimeout('linkit('+item+')', 100*i);
+  setTimeout('flash=setInterval("cursp.style.visibility=(cursp.style.visibility==\'visible\')?\'hidden\':\'visible\'", 234)', 100*i)
+  setTimeout('clearInterval(flash)', delay);
+  setTimeout('cursp.style.visibility="visible"', delay);
+  setTimeout('ticker()', delay);
+  item=++item%news.length;
+}
+
+function linkit(q) {
+  var a,p,e,l;
+  p=news[q].indexOf("www");
+  e=news[q].indexOf(" ", p);
+  if (e==-1) e=news[q].length;
+  l=news[q].substring(p, e);
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[q].substring(0, p)));
+  a=document.createElement("a");
+  a.href="http://"+l;
+  a.appendChild(document.createTextNode(l));
+  newsp.appendChild(a);
+  newsp.appendChild(document.createTextNode(news[q].substring(e)));
+}
+// ]]>
+</script>
+
+    	<!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+	</head>
+
+	<body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!-- navigation bar <a href="/"><img src="images/logo.png" alt="logo"></a> -->
+    <nav>
+
+    <span class="logo"> <a href="/">JOYCE JIANG</a></span>
+
+    <!--
+    <li><a href="https://jjoyceny02.wixsite.com/my-site">FEATURED</a></li>
+    <li><a href="https://jjoyceny02.wixsite.com/my-site/playground" title="graphic design, photography" target="_blank" >PLAYGROUND</a></li>
+    <li><a href="./aboutme.html">ABOUT</a></li>
+-->
+    <li><button class="resume_btn"><a href="https://drive.google.com/file/d/1HGuPFG1VFqsnXP2i7zhbC9TRmlDvyUuZ/view?usp=sharing" target="_blank" >RESUME</a></button></li>
+    
+  </nav>
+
+<!-- main page 
+		<h1> Nice to  meet you, <p class="headtext2"><span class="hoverline">I'm Joyce.</span></p></h1>
+		<p class="animoji"><img src="images/animoji.png" alt="my animoji"></p> -->
+    <h3 id="news">ASPIRING PRODUCT DESIGNER/UX ENGINEER ‣ she/her  ‣ NYC</h3>
+
+  <div class='bioNlinks' id='row'>
+    <div class='bioBox'>
+      <p style="color:#565656;">💸 Currently designing for <a href="https://www.linkedin.com/company/opal-la/mycompany/"><b>Opal, llc.</b></a>, an upcoming startup working to make cryptocurrency and NFTs more accessible, interactive, & engaging.</p> 
+      <!-- <p>Incoming interns at <a href="https://titlesnyc.com/">Titles, NYC</a> and <a href="https://www.floodgate.com/">Floodgate.</a></p> -->
+
+<br>
+
+      <p>I'm a current FLI sophomore at <b><u>Barnard College of Columbia University</b></u> pursuing a B.A in <b><u>Cognitive Science</u></b> and minor in Science, Ethics, & Public Policy. I'm an aspiring <b><u>Product Designer</b></u> passionate about ethical and accessible Human-Computer Interaction, designing for social good, tech ethics surrounding AI/algorithm bias, and the intersection of public policy and tech.
+      </p> <br>
+      
+    </div>
+
+    <div class='linkBox'>
+      <a href="https://www.notion.so/Design-Portfolio-a91e1d477b0a4b939ae954a51578eff0" target="_blank">ALL DESIGN WORK</a> <br>
+      <a href="https://www.notion.so/Photography-Portfolio-e105809b7dbf46ec9c722bb00ac4fc60" target="_blank">PHOTOGRAPHY</a><br>
+      <a href="./aboutme.html" target="_blank">WRITING</a><br>
+      <a href="./aboutme.html" target="_blank">ABOUT</a><br>
+    </div>
+    
+  </div>
+
+<!--
+<div class="containers">
+ <p style="color:#565656;">💸 Currently designing for <a href="https://www.linkedin.com/company/opal-la/mycompany/"><b>Opal, llc.</b></a>, an upcoming startup working to make cryptocurrency and NFTs more accessible, interactive, & engaging.</p> </div>
+ <div class="containers">
+  <p>I'm a current FLI sophomore at <b><u>Barnard College of Columbia University</b></u> pursuing a B.A in <b><u>Cognitive Science</u></b> and minor in Science, Ethics, & Public Policy. I'm an aspiring <b><u>Product Designer</b></u> passionate about ethical and accessible Human-Computer Interaction, designing for social good, tech ethics surrounding AI/algorithm bias, and the intersection of public policy and tech.
+</p> </div>
+<div class="linkcontainer"> hi</div> --->
+
+<p></p><p><p><p></p></p></p><br>
+
+
+<center><button class="btn"><a href="https://jjoyceny02.wixsite.com/my-site" target="_blank">VIEW WORK</a></button></center>
+    <p><center><small><small>coding under construction</small></small></center></p><br>
+    <center><img src="images/dino.png"></center>
+
+
+    
+
+<p><p></p></p>
+
+<!--
+ <h1>Flex-Direction: Column</h1>
+  <div class='container' id='row'>
+    <div class='box'>
+      <h2>1</h2>
+    </div>
+    <div class='box'>
+      <h2>2</h2>
+    </div>
+    <div class='box'>
+      <h2>3</h2>
+    </div>
+    <div class='box'>
+      <h2>4</h2>
+    </div>
+    <div class='box'>
+      <h2>5</h2>
+    </div>
+  </div> -->
+
+<!--
+    <div id="portfoliocases">
+      <span class="titles_project">Netflix Wrapped</span>
+      <spam class="lines"></span>
+      <span class="type_project"><img src="images/type of project.png" alt="type of project"></span>
+      
+      <br>
+      <span class="mockups"><img src="images/netflix mockups.png"></span>
+      <div id="content">
+        <span class="filters_btn">+ UI/UX Design</span>
+        <span class="filters_btn">+ Prototyping</span>
+        <span class="filters_btn">+ InVision</span>
+        <span class="filters_btn">+ Figma</span>
+      </div>
+    </div>
+-->
+
+		<!-- contents-->
+
+    <!-- bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+	</body>
+<br><br><br><br>
+<footer>
+  <span class="hoverline"><h2 style="margin-top:-5px;">Get in touch!</h2></span>
+
+<span class="footerabout">
+  <p>Thank you so much for visiting my portfolio! You can learn more about me <a style="color:#9FC6FF;" href="./aboutme.html"><strong>here</strong></a>. I’m also happy to chat! Say ‘hello’ at my <a style="color:#99FC6FF;" href="https://www.linkedin.com/in/joyce--jiang/"><b>LinkedIn</b></a> or my <a href="mailto:jj3115@columbia.edu">email.</a><br><br>
+For more info on my work, here is my <a href="https://drive.google.com/file/d/1HGuPFG1VFqsnXP2i7zhbC9TRmlDvyUuZ/view?usp=sharing" target="_blank" >resume.</a></p><p style="font-size:11px;"><i>I'm currently in the process of coding other pages of my portfolio and-- stay tuned!</i></p></span>
+<br>
+
+<div id="creds">
+  <h3 style="font-size:18px;">Personally designed & coded with 💘</h3>
+  <p style="font-size:12px; font-weight:200;">© 2020 Joyce Jiang. All Rights Reserved.</p>
+</div>
+
+</footer>
+</html>
