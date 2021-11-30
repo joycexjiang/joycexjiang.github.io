@@ -47,10 +47,12 @@ a{
   text-decoration: underline;
   color: #BF8CFF;
   cursor: url(http://i.imgur.com/2qleX.jpg), auto;
+  transition: background-size 1s ease-in;
 }
 
 a:hover{
   cursor: url(http://i.imgur.com/IepP2.jpg), auto;
+  transition: background-size 1s ease-in;
 }
 
 h1{
@@ -82,6 +84,11 @@ h4{
   font-size: 30px;
   font-weight: 400;
   font-style: italic;
+}
+
+h3{
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
 }
 
 .headtext2{
@@ -144,7 +151,7 @@ nav li a:hover{
 }
 
 .logo a{
-  padding-right:672px;
+  padding-right:702px;
   margin-left:-20px;
   /*padding-top:44px;*/
   font-family: "Ogg";
@@ -265,6 +272,7 @@ nav li a:hover{
   line-height:24px;
   height: auto;
   flex-grow: 1;
+  
 }
 
 .linkBox {
