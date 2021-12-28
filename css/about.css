@@ -1,0 +1,50 @@
+
+#aboutrow {
+  flex-direction: row;
+}
+
+.aboutmecontent{
+  width:55%;
+  float: left;
+  font-size:16px;
+  height: auto;
+  display: inline;
+  font-family: 'Inter';
+  margin-left:  15px;
+  line-height:  25px;
+}
+
+.aboutmecontent h2{
+  font-size:25px;
+}
+
+.aboutmecontent h3{
+  font-size:19px;
+  font-family: 'Karla';
+  font-weight: 300;
+  margin-top: -5px;
+  line-height:  25px;
+  margin-left:  20px;
+}
+
+
+.aboutmepic{
+  float: right;
+  display: inline;
+  width:30%;
+  height: auto;
+  border: 4px double black;
+  margin-right: 20px;
+}
+
+/* Clear floats after the columns */
+.aboutrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@font-face {
+  font-family: 'Ogg';
+  src: url("./fonts/Ogg.ttf") format("truetype");
+}
