@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'Ogg';
-  src: url("./fonts/Ogg.ttf") format("truetype");
+  src: url(.fonts/Ogg.ttf) format("truetype");
 }
 
 body {

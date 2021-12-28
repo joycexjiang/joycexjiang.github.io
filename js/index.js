@@ -1,7 +1,3 @@
-@font-face {
-  font-family: 'Ogg';
-  src: url("./fonts/Ogg.ttf") format("truetype");
-}
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
@@ -19,6 +15,7 @@ $(document).ready(function() {
   $('.animoji').on('onclick', function() {
       $(this).html('<img src="images/animoji hover.png" height=220px>');
     });
+
 });
 
 //smooth anchor link
