@@ -1,15 +1,33 @@
-$(document).ready(function() {
-	console.log("hello")
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
-	$('.animoji').on('onclick', function() {
-   		$(this).html('<img src="images/animoji hover.png" height=220px>');
-  	});
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+$(document).ready(function() {
+  console.log("hello")
+
+  $('.animoji').on('onclick', function() {
+      $(this).html('<img src="images/animoji hover.png" height=220px>');
+    });
 });
 
-// <![CDATA[
-var colours=new Array("#a6f", "#60f", "#60f", "#a6f", "#ccc"); // colours for top, right, bottom and left borders and background of bubbles
-var bubbles=26; // maximum number of bubbles on screen
-var over_or_under="over"; // set to "over" for bubbles to always be on top, or "under" to allow them to float behind other objects
+//smooth anchor link
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 
 /****************************
 * JavaScript Bubble Cursor  *
@@ -17,6 +35,12 @@ var over_or_under="over"; // set to "over" for bubbles to always be on top, or "
 *  http://www.mf2fm.com/rv  *
 * DON'T EDIT BELOW THIS BOX *
 ****************************/
+
+// <![CDATA[
+var colours=new Array("#a6f", "#60f", "#60f", "#a6f", "#ccc"); // colours for top, right, bottom and left borders and background of bubbles
+var bubbles=26; // maximum number of bubbles on screen
+var over_or_under="over"; // set to "over" for bubbles to always be on top, or "under" to allow them to float behind other objects
+
 var x=ox=400;
 var y=oy=300;
 var swide=800;
@@ -44,7 +68,7 @@ function buble() { if (document.getElementById) {
   for (i=0; i<bubbles; i++) {
     rats=createDiv("3px", "3px");
     rats.style.visibility="hidden";
-	rats.style.zIndex=(over_or_under=="over")?"1001":"0";
+  rats.style.zIndex=(over_or_under=="over")?"1001":"0";
 
     div=createDiv("auto", "auto");
     rats.appendChild(div);
@@ -117,10 +141,10 @@ function update_bubb(i) {
     bubby[i]-=bubbs[i]/2+i%2;
     bubbx[i]+=(i%5-2)/5;
     if (bubby[i]>sdown && bubbx[i]>sleft && bubbx[i]<sleft+swide+bubbs[i]) {
-	  if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
-		bubb[i].width=bubbs[i]+"px";
-		bubb[i].height=bubbs[i]+"px";
-	  }
+    if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
+    bubb[i].width=bubbs[i]+"px";
+    bubb[i].height=bubbs[i]+"px";
+    }
       bubb[i].top=bubby[i]+"px";
       bubb[i].left=bubbx[i]+"px";
     }
@@ -266,4 +290,23 @@ function linkit(q) {
 // ]]>
 
 
+// SCROLLING UNDERLINE 
 
+(function (document) {
+  const markers = [...document.querySelectorAll('mark')];
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.8
+  });
+  
+  markers.forEach(mark => {
+    observer.observe(mark);
+  });
+})(document);

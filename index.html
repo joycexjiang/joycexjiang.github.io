@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+  <head>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,28 +10,36 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
    <meta name="author" content="Joyce Jiang, student at Barnard College">
 
-		<title>Joyce Jiang | Portfolio</title>
-		<link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/5846/premium/5846843.png?token=exp=1640408898~hmac=1f3a5d93629b63136ffb4ae230646868">
+    <title>Joyce Jiang | Portfolio</title>
+    <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/5846/premium/5846843.png?token=exp=1640408898~hmac=1f3a5d93629b63136ffb4ae230646868">
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript" src="js/index.js"> </script>
-    	<!-- fonts -->
+
+      <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-	</head>
+  </head>
 
-	<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="./js/index.js"></script>
+  <body>
+  
+
+    <!-- <div class="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>-->
+
 
     <nav>
       <span class="logo"> <a href="/">Joyce Jiang</a></span>
@@ -46,24 +54,47 @@
 
       <br>
 
-      <p>I'm a current first-generation second year undergradate at <b><u>Barnard College of Columbia University</b></u> pursuing a B.A in <b><u>Cognitive Science</u></b> and minor in Science, Ethics, & Public Policy. </p>
-
-      <p> I'm a self taught <b><u>Product Designer</b></u> passionate about ethical and accessible Human-Computer Interaction, designing for social good, tech ethics surrounding AI/algorithm bias, and the intersection of public policy and tech.
+      <p>I'm a current first-generation second year undergradate at <mark><b>Barnard College of Columbia University</b></mark> pursuing a B.A in <b><mark>Cognitive Science</mark></b> and minor in Science, Ethics, & Public Policy. </p>
+      <BR>
+      <p> I'm a self taught <b><mark>Product Designer</b></mark> passionate about ethical and accessible Human-Computer Interaction, designing for social good, tech ethics surrounding AI/algorithm bias, and the intersection of public policy and tech.
       </p> <br>
     </div>
 
+    <script>(function (document) {
+  const markers = [...document.querySelectorAll('mark')];
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.8
+  });
+  
+  markers.forEach(mark => {
+    observer.observe(mark);
+  });
+})(document);</script>
+
     <div class='linkBox'>
+      <right>
       <a href="https://www.notion.so/Design-Portfolio-a91e1d477b0a4b939ae954a51578eff0" target="_blank">ALL DESIGN WORK</a> <br>
       <a href="https://www.notion.so/Photography-Portfolio-e105809b7dbf46ec9c722bb00ac4fc60" target="_blank">PHOTOGRAPHY</a><br>
       <a href="./aboutme.html" target="_blank">WRITING</a><br>
       <a href="./aboutme.html" target="_blank">ABOUT</a><br>
+    </right>
     </div>
     
   </div>
 
 <p></p><p><p><p></p></p></p><br>
 
-<p><center><small>[ This portfolio coding is currently a work in progress ]</small></center></p><br>
+<p><center><small>[ This portfolio coding is currently a work in progress ]</small></center></p>
+
+<center><a href="#featured"><img src="https://thumbs.gfycat.com/AcidicGlamorousCirriped-max-1mb.gif" height="50px"></a></center>
 
 <p><p><p><p></p></p></p></p>
 
@@ -76,7 +107,7 @@
           <div class="category">PRODUCT DESIGNER - PRESENT </div>
           <div class="details">
             One of three designers responsible for the user interface of web and mobile platform of Opal, an upcoming social media platform to buy and sell NFTs. <p></p>
-            <p> work under NDA: please <a href = "mailto:jj3115@columbia.edu?subject = Feedback&body = Portfolio Inquiry: Opal, llc.">email</a> me for more information!</p>
+            <p> work under NDA: please <a href = "mailto:jj3115@columbia.edu?subject = Feedback&body = Portfolio Inquiry: Opal, llc."><mark>email</mark></a> me for more information!</p>
           </div>
           <div class="tags">
             USER INTERFACE , PROTOTYPING, FIGMA, USER RESEARCH, COMPETITIVE ANALYSIS
@@ -113,7 +144,7 @@
     <div class="column">
       <div class="description">
         <div class="titles_project-2column">CoVax Track</div><p>
-        <div class="category-2column">Datathon Submission - Spring 2021</div>
+        <div class="category-2column">DATATHON SUBMISSION - SPRING 2021</div>
         <div class="featuredpostrow"><img src="https://static.wixstatic.com/media/6a9065_807fdd392ed64471b78038129ff59462~mv2.png/v1/fill/w_842,h_516,al_c,q_90,usm_0.66_1.00_0.01/mock%20up.webp" loading="eager" alt=""></div>
         <div class="details">
         The informative platform for all COVID-19 vaccine needs.</div>
@@ -126,7 +157,7 @@
     <div class="column">
       <div class="description">
         <div class="titles_project-2column">Netflix Wrapped</div>
-        <div class="category-2column">Personal Project - Winter 2020"</div>
+        <div class="category-2column">PERSONAL PROJECT - WINTER 2020</div>
 
         <div class="featuredpostrow"><img src="https://static.wixstatic.com/media/6a9065_60569b303e704c7bbda3bed0ea19e1a0~mv2.png/v1/fill/w_693,h_414,al_c,lg_1,q_85/mockups%201.webp" loading="eager" alt=""></div>
 
@@ -149,21 +180,25 @@
 
 <div id="footer_outer">
 
-  <div class="footer_left"><span class="hoverline"><h2 style="margin-top:-5px;">Get in touch!</h2></span></div>
+  <div class="footer_left"><h2 style="font-size: 35px; line-height:30px;">welcome to my little <br>corner of the </h2>
 
-  <div class="footerabout">
+    <span class="hoverline"><h2 style="font-size: 35px; line-height:30px;">internet.</h2></span></div>
+
+  <div class="footer_about">
 
     Thank you so much for visiting my portfolio! You can learn more about me <a style="color:#9FC6FF;" href="./aboutme.html"><strong>here</strong></a>. I’m also happy to chat! Say ‘hello’ at my <a style="color:#99FC6FF;" href="https://www.linkedin.com/in/joyce--jiang/"><b>LinkedIn</b></a> or my <a href="mailto:jj3115@columbia.edu">email.</a>
 
-    <p><br>For more info on my work, here is my <a href="https://drive.google.com/file/d/1JXN2VnirjGYLSc2lFNW6RbAVI03nHZUC/view?usp=sharing" target="_blank" >resume.</a></p>
+    <p><br>For more info on my work, here is my <a style ="color: #9FC6FF;" href="https://drive.google.com/file/d/1JXN2VnirjGYLSc2lFNW6RbAVI03nHZUC/view?usp=sharing" target="_blank" ><strong>resume.</strong></a></p>
 
     <p style="font-size:11px;"><i>I'm currently in the process of coding other pages of my portfolio and-- stay tuned!</i></p>
 
   </div>
 
   <div id="creds">
-    <h3 style="font-size:18px;">Personally designed & coded with ❤️‍🔥</h3>
+    <center>
+    <h3 style="font-size:18px;">Personally designed, coded, & developed with ❤️‍🔥</h3>
     <p style="font-size:12px; font-weight:200;">© 2022 Joyce Jiang. All Rights Reserved.</p>
+  </center>
   </div>
 
 </div>

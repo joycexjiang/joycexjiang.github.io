@@ -9,11 +9,48 @@ function myFunction() {
 }
 
 $(document).ready(function() {
-	console.log("hello")
 
-	$('.animoji').on('onclick', function() {
-   		$(this).html('<img src="images/animoji hover.png" height=220px>');
-  	});
+
+  console.log("hello")
+
+  $('.animoji').on('onclick', function() {
+      $(this).html('<img src="images/animoji hover.png" height=220px>');
+    });
+
+// SCROLL HIGHLIGHT FEATURE//
+
+(function (document) {
+  const markers = [...document.querySelectorAll('mark')];
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.8
+  });
+  
+  markers.forEach(mark => {
+    observer.observe(mark);
+  });
+})(document);
+
+
+$(".aboutmepic").hover(function() {
+        $(this).css(
+            "transform", "scale(0.9)"
+        );
+    }, function() {
+        $(this).css(
+            "transform", "scale(0.9)"
+        );
+    });
+
+element.style.pointerEvents = "none"; 
+
 });
 
 // <![CDATA[
@@ -54,7 +91,7 @@ function buble() { if (document.getElementById) {
   for (i=0; i<bubbles; i++) {
     rats=createDiv("3px", "3px");
     rats.style.visibility="hidden";
-	rats.style.zIndex=(over_or_under=="over")?"1001":"0";
+  rats.style.zIndex=(over_or_under=="over")?"1001":"0";
 
     div=createDiv("auto", "auto");
     rats.appendChild(div);
@@ -127,10 +164,10 @@ function update_bubb(i) {
     bubby[i]-=bubbs[i]/2+i%2;
     bubbx[i]+=(i%5-2)/5;
     if (bubby[i]>sdown && bubbx[i]>sleft && bubbx[i]<sleft+swide+bubbs[i]) {
-	  if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
-		bubb[i].width=bubbs[i]+"px";
-		bubb[i].height=bubbs[i]+"px";
-	  }
+    if (Math.random()<bubbs[i]/shigh*2 && bubbs[i]++<8) {
+    bubb[i].width=bubbs[i]+"px";
+    bubb[i].height=bubbs[i]+"px";
+    }
       bubb[i].top=bubby[i]+"px";
       bubb[i].left=bubbx[i]+"px";
     }
@@ -210,70 +247,72 @@ function createDiv(height, width) {
 }
 // ]]>
 
-// <![CDATA[
-var aboutmeheader=Array("Hi, I'm Joyce (she/they)");
-var cursor="|"; // set cursor
-var delay=1000; // seconds between each news item
+(function($) {
+        $.fn.textWidth = function(){
+             var calc = '<span style="display:none">' + $(this).text() + '</span>';
+             $('body').append(calc);
+             var width = $('body').find('span:last').width();
+             $('body').find('span:last').remove();
+            return width;
+        };
 
-/***************************\
-* News Ticker Text Effect   *
-*(c)2004-14 mf2fm web-design*
-*  http://www.mf2fm.com/rv  *
-* DON'T EDIT BELOW THIS BOX *
-\***************************/
-var newsp, cursp, flash, item=0;
+        $.fn.marquee = function(args) {
+            var that = $(this);
+            var textWidth = that.textWidth(),
+                offset = that.width(),
+                width = offset,
+                css = {
+                    'text-indent' : that.css('text-indent'),
+                    'overflow' : that.css('overflow'),
+                    'white-space' : that.css('white-space')
+                },
+                marqueeCss = {
+                    'text-indent' : width,
+                    'overflow' : 'hidden',
+                    'white-space' : 'nowrap'
+                },
+                args = $.extend(true, { count: -1, speed: 1e1, leftToRight: false }, args),
+                i = 0,
+                stop = textWidth*-1,
+                dfd = $.Deferred();
 
-if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
-  var oldonload=window.onload;
-  if (typeof(oldonload)!='function') window.onload=funky;
-  else window.onload=function() {
-    if (oldonload) oldonload();
-    funky();
-  }
-}
+            function go() {
+                if(!that.length) return dfd.reject();
+                if(width == stop) {
+                    i++;
+                    if(i == args.count) {
+                        that.css(css);
+                        return dfd.resolve();
+                    }
+                    if(args.leftToRight) {
+                        width = textWidth*-1;
+                    } else {
+                        width = offset;
+                    }
+                }
+                that.css('text-indent', width + 'px');
+                if(args.leftToRight) {
+                    width++;
+                } else {
+                    width--;
+                }
+                setTimeout(go, args.speed);
+            };
+            if(args.leftToRight) {
+                width = textWidth*-1;
+                width++;
+                stop = offset;
+            } else {
+                width--;            
+            }
+            that.css(marqueeCss);
+            go();
+            return dfd.promise();
+        };
+    })(jQuery);
+    $('h2').marquee({ count: 2 });
+    $('h4').marquee({ leftToRight: true });
 
-addRVLoadEvent(teleprint);
-
-function teleprint () { if (document.getElementById) {
-  var span=document.getElementById("aboutmeheader");
-  while (span.childNodes.length) span.removeChild(span.childNodes[0]);
-  delay*=1000;
-  newsp=document.createElement("span");
-  cursp=document.createElement("span");
-  cursp.appendChild(document.createTextNode(String.fromCharCode(160)+cursor));
-  span.appendChild(newsp);
-  span.appendChild(cursp);
-  ticker();
-}}
-
-function ticker() {
-  var i;
-  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
-  newsp.appendChild(document.createTextNode(aboutmeheader[item].substring(0,1)));
-  for (i=1; i<aboutmeheader[item].length; i++) setTimeout('newsp.firstChild.nodeValue="'+aboutmeheader[item].substring(0, i+1)+'"', 100*i);
-  if (aboutmeheader[item].indexOf("www")!=-1) setTimeout('linkit('+item+')', 100*i);
-  setTimeout('flash=setInterval("cursp.style.visibility=(cursp.style.visibility==\'visible\')?\'hidden\':\'visible\'", 234)', 100*i)
-  setTimeout('clearInterval(flash)', delay);
-  setTimeout('cursp.style.visibility="visible"', delay);
-  setTimeout('ticker()', delay);
-  item=++item%aboutmeheader.length;
-}
-
-function linkit(q) {
-  var a,p,e,l;
-  p=aboutmeheader[q].indexOf("www");
-  e=aboutmeheader[q].indexOf(" ", p);
-  if (e==-1) e=aboutmeheader[q].length;
-  l=aboutmeheader[q].substring(p, e);
-  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
-  newsp.appendChild(document.createTextNode(aboutmeheader[q].substring(0, p)));
-  a=document.createElement("a");
-  a.href="http://"+l;
-  a.appendChild(document.createTextNode(l));
-  newsp.appendChild(a);
-  newsp.appendChild(document.createTextNode(aboutmeheader[q].substring(e)));
-}
-// ]]>
 
 
 

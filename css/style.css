@@ -1,3 +1,26 @@
+/* Style the header: fixed position (always stay at the top) */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
 ::-webkit-scrollbar-thumb:vertical {
   background-color:#eee;
   -moz-border-radius:10px;
@@ -29,7 +52,7 @@ body {
   color: #161616;
   padding-bottom: 80px;
   text-align: left;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 17px;
   cursor: url(http://i.imgur.com/2qleX.jpg), auto;
 }
@@ -39,12 +62,15 @@ a{
   text-decoration: underline;
   color: #BF8CFF;
   cursor: url(http://i.imgur.com/2qleX.jpg), auto;
-  transition: background-size 1s ease-in;
+  transition:800ms ease all;
 }
 
+
+
 a:hover{
+  color:  #9FC6FF;
   cursor: url(http://i.imgur.com/IepP2.jpg), auto;
-  transition: background-size 1s ease-in;
+  transition:800ms ease all;
 }
 
 
@@ -63,7 +89,7 @@ a:hover{
 h1{
   font-family: 'Ogg';
   color: black;
-  font-size: 70px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 15px;
   cursor: url(http://i.imgur.com/2qleX.jpg), auto;
@@ -74,7 +100,7 @@ h2{
   color: black;
   font-size: 50px;
   font-weight: 400;
-  display:inline-block;
+  display:inline;
   line-height: 15px;
 }
 
@@ -109,6 +135,28 @@ h5{
 .hoverline:hover {
   background-size: 100% 15px;
   background-position: 0 57%;
+}
+
+mark {
+  --color1: #E9F4E8;
+  --color2: #9FC6FF;
+  --bg-height: 20%;
+    
+  all: unset;
+  background-image: linear-gradient(var(--color1), var(--color2));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 var(--bg-height);
+  animation: highlight 800ms 1 ease-out;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+
+@keyframes highlight {
+  to {
+    background-size: 100% var(--bg-height);
+  }
 }
 
 nav{
@@ -356,7 +404,7 @@ hr{
 
 .category{
   border-bottom: 1px solid black;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   color:#797979;
   text-align: left;
   margin-left: 120px;
@@ -369,7 +417,7 @@ hr{
 }
 
 .category-2column{
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   color:#797979;
   text-align: left;
   width: auto;
@@ -391,7 +439,7 @@ hr{
 
 .sfroutes-category{
   border-bottom: 1px solid black;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   color:#797979;
   text-align: left;
   margin-left: 260px;
@@ -530,7 +578,7 @@ hr{
 }
 
 .footer_left{
-  margin-top: 50px;
+  margin-top: 30px;
   padding-top: 10px;
   width: 40%;
   Float: left;
@@ -545,16 +593,16 @@ hr{
   font-size:15px;
   line-height:18px;
   font-weight:400;
-  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-top: 10px;
   padding-top: 10px;
-  height:200px;
-  border: 1px solid green;
+  height:auto;
 }
 
 #creds{
   text-align: center;
   display:block;
-  margin-top:100px;
+  margin-top:220px;
   line-height:5px;
 }
 
