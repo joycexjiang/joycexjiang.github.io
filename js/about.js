@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Ogg';
+  src: url("./fonts/Ogg.ttf") format("truetype");
+}
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
