@@ -82,7 +82,7 @@ h2{
 
 h3{
   font-family: 'Poppins', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 h4{
@@ -96,7 +96,7 @@ h4{
 h5{
   font-family: "Ogg";
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -257,14 +257,19 @@ nav li a:hover{
   padding-left: 5%;
 }
 
-.linkBox a{
+.links{
   font-family: "Ogg";
   color: black;
   font-size: 14px;
   font-weight: 400;
-  display:inline;
+  display:block;
   text-align:left;
 }
+
+.links a{
+  color: black;
+}
+
 
 #row {
   flex-direction: row;
@@ -439,6 +444,13 @@ hr{
   transition:800ms ease all;
 }
 
+.sffeaturedpost img {
+  max-height: 400px;
+  margin-left: 7vw;
+  margin-top: 2vw;
+  transition:800ms ease all;
+}
+
 .featuredpost img: hover{
   margin-top: 6vw;
   transition:800ms ease all;
@@ -543,6 +555,13 @@ hr{
   width: 100%;
   border-top: 1px solid black;
   padding: 5% 13% 0% 13%;
+}
+
+.footerwelcome{
+  display: inline;
+  font-family: "Ogg";
+  font-size: 35px;
+  line-height:30px;
 }
 
 .footer_left{
@@ -741,18 +760,174 @@ hr{
   }
 }
 
-@media screen and (max-width:  479px){
-  .featured {
-    margin-right: 20px;
-    margin-left: 20px;
+@media screen and (max-width: 500px){
+
+  .logo a{
+    padding-bottom: 5%;
+    font-size: 20px;
   }
-  .project {
-    height: auto;
+
+  .resume_btn{
+    width: 107px;
+    height: 34px;
   }
-  .column-32 {
-    height: auto;
+
+  .resume_btn a{
+    font-size: 11px;
   }
+
+  #bioNlinks{
+    padding: 0% 10% 0% 10%;
+    display: block;
+  }
+
+  .bioBox {
+    width: 100%;
+    line-height:24px;
+    flex-grow: 1;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .linkBox {
+    width: 100%;
+    margin-top: 1%;
+    height: 5%;
+    padding-left: 0%;
+  }
+
+  .links{
+    font-size: 14px;
+    padding-right: 5%;
+    display:inline-flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  h4{ /* typinig title */
+    font-size: 19px;
+  }
+
+  h5{ /*currently headline */
+    font-size: 14px;
+  }
+
+  #featured {
+    padding: 0% 10% 0% 10%;
+    width: 100%;
+  }
+
+  .description {
+    margin-left: 0%;
+  }
+
   .details {
-    font-size: 12px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 3%;
   }
+
+  .tags {
+    font-size: 13px;
+  }
+
+  .btn-protect{
+    width: 147px;
+    height: 36px;
+    font-size:  11px;
+    margin-top: 30%;
+    margin-left: 60%;
+  }
+
+  .titles_project{
+    font-size: 30px;
+  }
+
+  .category{
+    font-size: 15px;
+    margin-left: 20%;
+    margin-top: 1%;
+    width: 80%;
+  }
+
+  .featuredpost img {
+    max-height: 200px;
+    margin-left: -40%;
+    margin-top: -100%;
+    z-index:  0.2;
+  }
+
+  .sffeaturedpost img {
+    max-height: 200px;
+    margin-left: 30%;
+    margin-top: -50%;
+    transition:800ms ease all;
+  }
+
+  .btn-reg{
+    width: 137px;
+    height: 37px;
+    font-size:  11px;
+  }
+
+  .sfroutes-category{
+    font-size: 15px;
+    margin-left: 0%;
+    margin-top: 12%;
+    width: 80%;
+  }
+
+  .titles_project-2column{
+    font-size: 20px;
+    margin-top: 2px;
+  }
+
+  .category-2column{
+    font-size:  10px;
+    padding-top: 2%;
+  }
+
+  .featuredpostrow img {
+    max-height: 110px;
+  }
+
+  #footer_outer{
+    margin-top: 550px;
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 5% 5% 0% 5%;
+  }
+
+  .footerwelcome{
+    display: inline;
+    font-family: "Ogg";
+    font-size: 15px;
+    line-height:20px;
+  }
+
+  .footer_left{
+    margin-top: 4%;
+    padding-top: 2%;
+    height: 150px;
+  }
+
+  .footer_about{
+    font-size:13px;
+    padding-top: 0%;
+  }
+
+  #creds{
+    text-align: center;
+    display:block;
+    margin-top:60%;
+    line-height:5px;
+    padding-bottom: 80px;
+  }
+
+  h3{/* personally designed */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+
 }
