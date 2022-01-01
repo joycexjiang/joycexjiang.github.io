@@ -596,6 +596,21 @@ hr{
 }
 
 
+#links{
+  text-align: right;
+  margin-top:20%;
+  line-height:5px;
+}
+
+#links a{
+  font-family: "Ogg";
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  display:inline;
+  text-align:right;
+}
+
 /* sizing layouting */
 @media screen and (min-width:  1920px){
   .featured {
@@ -907,8 +922,9 @@ hr{
     max-width: 100%;
   }
 
+
   #footer_outer{
-    margin-top: 980px;
+    margin-top:260%;
     width: 100%;
     border-top: 1px solid black;
     padding: 5% 5% 0% 5%;
@@ -941,14 +957,28 @@ hr{
     width: 50%;
   }
 
-  #creds{
+    #creds{
     text-align: center;
     display:block;
-    margin-top:50%;
+    margin-top:10%;
     line-height:5px;
     padding-bottom: 30px;
   }
 
+  #links{
+    margin-top:37%;
+    line-height:5px;
+    width:  100%;
+    flex-direction:  row;
+  }
+
+  #links a{
+    display:inline-block;
+    width:  100%;
+    padding: 0.9%;
+    font-size: 13px;
+    line-height: -3px;
+  }
   h3{/* personally designed */
     font-family: 'Poppins', sans-serif;
     font-size: 14px;

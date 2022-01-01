@@ -181,20 +181,6 @@
   line-height:5px;
 }
 
-#links{
-  text-align: right;
-  margin-top:20%;
-  line-height:5px;
-}
-
-#links a{
-  font-family: "Ogg";
-  color: black;
-  font-size: 15px;
-  font-weight: 400;
-  display:inline;
-  text-align:right;
-}
 
 @media screen and (max-width: 500px){ /* iphone size */
   
@@ -219,13 +205,12 @@
     width: 80%;
     margin-left: 13%;
     height: 66%;
-
   }
 
     .aboutmepic{
     display: block;
     flex-direction: column;
-    margin-top: -228%;
+    margin-top: -200%;
     font-size: 12px;
     width: 50%;
     margin-right: 22%;
@@ -258,9 +243,10 @@
     flex-direction:  column;
     width: 100%;
     height: auto;
-    padding: 2% 8.5% 0% 8%;
+    padding: 70% 8.5% 0% 8%;
     overflow: auto;
     white-space: nowrap;
+    margin-top: 70%;
   }
     .column-left{
       font-size: 11px;
@@ -289,11 +275,52 @@
       height: auto;
       margin-left: 10%;
       padding:  13% 13% 13% 13%;
-      margin-bottom: 10%;
+  }
+
+  #footer_outer{
+    margin-top: 30%;
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 5% 5% 0% 5%;
+    display: block;
+    flex-direction:  column;
+  }
+
+  .footerwelcome{
+    display: inline;
+    font-family: "Ogg";
+    font-size: 15px;
+    line-height:20px;
+  }
+
+  .footer_left{
+    margin-top: 4%;
+    padding-top: 2%;
+    height: 150px;
+    display: block;
+    width: 50%;
+    flex-direction:  column;
+  }
+
+  .footer_about{
+    font-size:11px;
+    line-height: 13px;
+    padding-top: 0%;
+    display: block;
+    flex-direction:  column;
+    width: 50%;
+  }
+
+    #creds{
+    text-align: center;
+    display:block;
+    margin-top:10%;
+    line-height:5px;
+    padding-bottom: 30px;
   }
 
   #links{
-    margin-top:67%;
+    margin-top:37%;
     line-height:5px;
     width:  100%;
     flex-direction:  row;
@@ -302,7 +329,9 @@
   #links a{
     display:inline-block;
     width:  100%;
-    padding: 2%;
+    padding: 0.9%;
+    font-size: 13px;
+    line-height: -3px;
   }
 }
 
