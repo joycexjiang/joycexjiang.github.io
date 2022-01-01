@@ -1,0 +1,213 @@
+<!DOCTYLE html>
+<html lang="en">
+	<head>
+		<!-- bootstrap -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    	<meta charset="UTF-8">
+    	<meta name="description" content="Portfolio">
+    	<meta name="keywords" content="HTML, CSS, JavaScript">
+    	<meta name="author" content="Joyce Jiang, student at Barnard College">
+
+    	<title>About Me | Joyce Jiang </title>
+
+    	<link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/5846/premium/5846843.png?token=exp=1640408898~hmac=1f3a5d93629b63136ffb4ae230646868">
+
+    	<link rel="stylesheet" type="text/css" href="./css/style.css">
+    	<link rel="stylesheet" type="text/css" href="./css/about.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script type="text/javascript" src="./js/about.js"> </script>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- responsive design -->
+
+    	 <!-- fonts -->
+	    <link rel="preconnect" href="https://fonts.gstatic.com">
+	    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  	<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+    	<!-- header -->
+    	<nav> <div id="header">
+    		<span class="logo"><a href="/">Joyce Jiang</a></span>
+
+    		<li><button class="resume_btn"><a href="https://drive.google.com/file/d/1JXN2VnirjGYLSc2lFNW6RbAVI03nHZUC/view?usp=sharing" target="_blank">RESUME</a></button></li>
+    	</div> </nav>
+
+    	<div id="aboutrow">
+    		<div class="aboutmecontent">
+    			<h2>Joyce (Chinese: 若彤) \Ruò-tóng\ <i>noun</i></h2><p></p>
+
+    			<div class="marquee">
+    				<div class="inner"><h2>self taught product designer-coder, visual storyteller, multi-hyphenate enthusiast, & a soul pieced together from the fuzhou mountain seas, new mexican sunsets, virginian forests, and currently, the big apple 🍎 🏙️ </h2></div>
+    			</div>
+
+    			<script>//for some reason not registering on about.js; fix later -->
+         (function($) {
+        $.fn.textWidth = function(){
+             var calc = '<span style="display:none">' + $(this).text() + '</span>';
+             $('body').append(calc);
+             var width = $('body').find('span:last').width();
+             $('body').find('span:last').remove();
+            return width;
+        };
+
+        $.fn.marquee = function(args) {
+            var that = $(this);
+            var textWidth = that.textWidth(),
+                offset = that.width(),
+                width = offset,
+                css = {
+                    'text-indent' : that.css('text-indent'),
+                    'overflow' : that.css('overflow'),
+                    'white-space' : that.css('white-space')
+                },
+                marqueeCss = {
+                    'text-indent' : width,
+                    'overflow' : 'hidden',
+                    'white-space' : 'nowrap'
+                },
+                args = $.extend(true, { count: -1, speed: 1e1, leftToRight: false }, args),
+                i = 0,
+                stop = textWidth*-1,
+                dfd = $.Deferred();
+
+            function go() {
+                if(!that.length) return dfd.reject();
+                if(width == stop) {
+                    i++;
+                    if(i == args.count) {
+                        that.css(css);
+                        return dfd.resolve();
+                    }
+                    if(args.leftToRight) {
+                        width = textWidth*-1;
+                    } else {
+                        width = offset;
+                    }
+                }
+                that.css('text-indent', width + 'px');
+                if(args.leftToRight) {
+                    width++;
+                } else {
+                    width--;
+                }
+                setTimeout(go, args.speed);
+            };
+            if(args.leftToRight) {
+                width = textWidth*-1;
+                width++;
+                stop = offset;
+            } else {
+                width--;            
+            }
+            that.css(marqueeCss);
+            go();
+            return dfd.promise();
+        };
+    })(jQuery);
+    $('h2').marquee({ count: 2 });
+    $('h4').marquee({ leftToRight: true });</script>
+
+    		<p>I'm a <mark>second year undergraduate</mark> and proud <mark>first-generation low-income</mark> student studying <b>cognitive science</b>, ethics, & public policy at <b>Barnard College of Columbia University</b>. <br> </p>
+
+    		<p>Currently, I'm designing at <a style="color: black; text-decoration: none;" href="https://www.floodgate.com/"><mark><b>Floodgate Fund</b></mark></a>, a Venture Capital Firm organizing and leading Reactor 22, a program designed to help ignite the next founders of the future, and will be joining their office in San Francisco Summer 2022. I'm also one of three Product Designers for <a style="color: black; text-decoration: none;" href="https://www.linkedin.com/company/opal-la/mycompany/"><b><mark>Opal, llc.</mark></b></a>, an upcoming startup based in Menlo Park. <br></p>
+
+    		<p>Previously, I worked as a <mark>Political Fellow</mark> for Qasim Rashid's 28th Virginia state Senate race. I’ve formerly organized and worked on multiple youth-led organizations and freelanced for <a style="color: black; text-decoration: none;" href="https://www.refinery29.csom/en-us/2020/04/9695705/coronavirus-racism-chinese-american-high-school-student-experience"><mark><b>Refinery29</b></mark></a>. I'm also a <a style="color:black; text-decoration: none;" href="https://www.notion.so/Photography-Portfolio-e105809b7dbf46ec9c722bb00ac4fc60"> <mark>photographer</mark></a> passionate about political advocacy and sharing the stories of young women of color and our experiences in this world. <br></p>
+
+    	</div> <!-- end about me content -->
+
+    	<div class="aboutmepic"><center><img src="./images/JoyceJiang.jpg" width="100%">product, venture, design, ethics</center>
+    	</div>
+    </div><!-- maybe? -->
+
+    <div id="boxesrow">
+
+	    <div class="column-left">
+	    	<h5><mark>🔭 INTERESTS</mark></h5>
+	    	• ethical implications of big tech/metaverse <br>
+		    • ai research and algorithm bias <br>
+		    • disney's soul <br>
+		    • illusion of time <br>
+		    • tiktok's impact on the music industry <br>
+		</div>
+
+		<div class="column-center">
+			<h5><mark>📖 READING </mark></h5>
+			• <b> "Data Feminism"</b> <small> by Catherine D'Ignazio and Lauren Klein </small> <p>
+		    • <b> "Decoding Manhattan"</b> <small> by Antonis Antoniou and Steven Heller </small> <p>
+		    • <b> "Indigenous Interfaces"</b> <small> Spaces, Technology, and Social Networks in Mexico and Central America </small>
+		</div>
+
+		<div class="column-right">
+			<h5><mark>🎶 LISTENING</mark></h5>
+
+			 • <b>Red (Taylor's Version) </b> by Taylor Swift <p>
+		     • <b>SAWAYAMA</b> by Rina Sawayama <p>
+		     • <b>CINEMA</b> by The Marias <p>
+		     • <b>Sweetener</b> by Ariana Grande
+		</div>
+
+	</div>
+
+	<p></p><p><p><p></p></p></p><br>
+
+<p><center><small>[ This portfolio coding is currently a work in progress ]</small></center></p>
+
+</body>
+
+<footer>
+
+	<div id="footer_outer">
+
+	  <div class="footer_left"><span class="footerwelcome">welcome to my little <br>corner of the<span class="hoverline"> internet.</span></span></div>
+
+	  <div class="footer_about">
+
+	    Thank you so much for visiting my portfolio! You can learn more about me <a style="color:#9FC6FF;" href="./aboutme.html"><strong>here</strong></a>. I’m also happy to chat! Say ‘hello’ at my <a style="color:#99FC6FF;" href="https://www.linkedin.com/in/joyce--jiang/"><b>LinkedIn</b></a> or my <a href="mailto:jj3115@columbia.edu">email.</a>
+
+	    <p><br>For more info on my work, here is my <a style ="color: #9FC6FF;" href="https://drive.google.com/file/d/1JXN2VnirjGYLSc2lFNW6RbAVI03nHZUC/view?usp=sharing" target="_blank" ><strong>resume.</strong></a></p>
+
+  	</div>
+
+  	<div id="links">
+  		<center>
+	      <a href="https://www.notion.so/Design-Portfolio-a91e1d477b0a4b939ae954a51578eff0" target="_blank"><span class="hoverline">ALL DESIGN WORK ↗ </span></a>  &nbsp;&nbsp;
+
+	      <a href="https://www.notion.so/Photography-Portfolio-e105809b7dbf46ec9c722bb00ac4fc60" target="_blank"><span class="hoverline">PHOTOGRAPHY ↗ </span></a> &nbsp;&nbsp;
+
+	      <a href="./writing.html" target="_blank"><span class="hoverline"> WRITING ↗ </span></a> &nbsp;&nbsp;
+
+	      <a href="./aboutme.html" target="_blank"><span class="hoverline"> ABOUT ↗ </span></a>&nbsp;&nbsp;
+
+ 		</center>
+	</div>
+
+	<div id="creds">
+	    <center>
+	    <h3>Personally designed, coded, & developed with ❤️‍🔥</h3>
+	    <p style="font-size:12px; font-weight:200;">© 2022 Joyce Jiang. All Rights Reserved.</p>
+		</center>
+  	</div>
+
+</div>
+</footer>
+
+</html>
+
+
+
+
+
+
+
+
+
