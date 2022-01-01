@@ -11,8 +11,8 @@
 }
 
 @font-face {
-  font-family: 'Ogg';
-  src: url(.fonts/Ogg.ttf) format("truetype");
+  font-family: "Ogg";
+  src: url(./fonts/Ogg.ttf) format("truetype");
 }
 
 body {
@@ -21,13 +21,11 @@ body {
   background-repeat: no-repeat;
   background-width: 100% auto;
   background-color: #FFFBFF;
-  margin: auto;
+  /*margin: auto;
   width: 80%;
   max-width: 1125px;
-  min-width: 300px;
-  padding-top: 10px;
+  min-width: 300px;*/
   color: #161616;
-  padding-bottom: 80px;
   text-align: left;
   font-family: 'Inter', sans-serif;
   font-size: 17px;
@@ -42,25 +40,26 @@ a{
   transition:800ms ease all;
 }
 
-
-
 a:hover{
   color:  #9FC6FF;
   cursor: url(http://i.imgur.com/IepP2.jpg), auto;
   transition:800ms ease all;
 }
 
+#header {
+  width:100%; 
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 10% 3% 10%;
+}
 
 .logo a{
-  padding-right:702px;
-  margin-left:-20px;
-  /*padding-top:44px;*/
+  padding-top: 2%;
   font-family: "Ogg";
   color: black;
   font-size: 30px;
   font-weight: 400;
   text-decoration: none;
-  line-height: 15px;
 }
 
 h1{
@@ -109,6 +108,7 @@ h5{
   left: -2.5px;
   transition: background-size 0.25s ease-in;
 }
+
 .hoverline:hover {
   background-size: 100% 15px;
   background-position: 0 57%;
@@ -118,7 +118,6 @@ mark {
   --color1: #E9F4E8;
   --color2: #9FC6FF;
   --bg-height: 20%;
-    
   all: unset;
   background-image: linear-gradient(var(--color1), var(--color2));
   background-position: 0 100%;
@@ -129,7 +128,6 @@ mark {
   animation-play-state: paused;
 }
 
-
 @keyframes highlight {
   to {
     background-size: 100% var(--bg-height);
@@ -137,15 +135,13 @@ mark {
 }
 
 nav{
-    background: transparent;
-    width: 100%;
-    text-align:center;
-    }
+  background: transparent;
+  width: 100%;
+  text-align:center;
+}
 
 nav li{
     display:inline-block;
-    /*display:block;*/
-    padding: 40px 50px;
 }
 
 nav li a{
@@ -156,7 +152,6 @@ nav li a{
     font-weight: 400;
     letter-spacing: 1px;
     transition: 1s;
-    top:-44px;
     background-image: linear-gradient(120deg, #9FC6FF 0%, #E9F4E8 100%);
     background-repeat: no-repeat;
     background-size: 100% 0px;
@@ -171,14 +166,12 @@ nav li a:hover{
 }
 
 .resume_btn{
-  left:0px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
   border-radius: 25px;
   border: 1px solid #343434;
   background: #343434;
-  position:relative;
   width: 147px;
   height: 44px;
   transition:800ms ease all;
@@ -239,27 +232,29 @@ nav li a:hover{
   transition:800ms ease all;
 }
 
-.bioNlinks {
-  display: flex;
-  max-height: 600px;
+#bioNlinks {
+  width: 100%;
+  padding: 2% 12% 0% 14%;
   align-items: center;
+  display: inline-flex;
+  /*margin: auto;
   justify-content: space-around;
+  */
 }
 
 .bioBox {
-  width: 520px;
+  width: 60%;
   line-height:24px;
   height: auto;
   flex-grow: 1;
 }
 
 .linkBox {
-  align-content: flex-start;
-  width: 50px;
+  width: 25%;
   height: 100px;
-  flex-grow: 1;
-  padding-left:250px;
-  margin-top:-157px;
+  text-align: left;
+  margin-top:-18%;
+  padding-left: 5%;
 }
 
 .linkBox a{
@@ -286,8 +281,7 @@ hr{
 }
 
 #featured {
-  margin-right: 10px;
-  margin-left: 10px;
+  padding: 0% 13% 0% 10%;
 }
 
 .project {
@@ -361,7 +355,6 @@ hr{
   font-weight: 400;
   text-align:left;
   float: left;
-  padding-right:  20px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -484,8 +477,6 @@ hr{
   font-weight: 300;
   text-align: center;
   width: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 
@@ -551,7 +542,7 @@ hr{
   margin-top: 750px;
   width: 100%;
   border-top: 1px solid black;
-  padding-top: 50px;
+  padding: 5% 13% 0% 13%;
 }
 
 .footer_left{
@@ -581,6 +572,7 @@ hr{
   display:block;
   margin-top:220px;
   line-height:5px;
+  padding-bottom: 80px;
 }
 
 
