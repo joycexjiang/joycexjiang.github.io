@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+	    <meta name="description" content="Portfolio">
+	    <meta name="keywords" content="HTML, CSS, JavaScript">
+	    <meta name="author" content="Joyce Jiang, student at Barnard College">
+
+	    <title>Joyce Jiang | Portfolio</title>
+	    <link rel="shortcut icon" href="https://cdn-icons.flaticon.com/png/512/5846/premium/5846843.png?token=exp=1640408898~hmac=1f3a5d93629b63136ffb4ae230646868">
+
+	    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	    <link rel="stylesheet" type="text/css" href="./css/sf.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="./js/index.js"></script>
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     	<!-- responsive design -->
+
+
+    	<!-- fonts -->
+    	<link rel="preconnect" href="https://fonts.gstatic.com">
+    	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    </head>
+
+    <body>
+
+    	<nav>
+    		<div id="header">
+    			<span class="logo"><a href="/">Joyce Jiang</a></span>
+<!--
+    			<span class="headerLinks">
+    				<a href="https://www.notion.so/Design-Portfolio-a91e1d477b0a4b939ae954a51578eff0" target="_blank">ALL DESIGN WORK </a> </span>
+    			<span class="headerLinks">
+    				<a href="https://www.notion.so/Photography-Portfolio-e105809b7dbf46ec9c722bb00ac4fc60" target="_blank">PHOTOGRAPHY </a> </span>
+    			<span class="headerLinks">
+    				<a href="./aboutme.html" target="_blank">WRITING </a> </span>
+    			<span class="headerLinks">
+    				<a href="./about.html" target="_blank">ABOUT </a> </span>
+ -->
+    			<button class="resume_btn"><a href="https://drive.google.com/file/d/1JXN2VnirjGYLSc2lFNW6RbAVI03nHZUC/view?usp=sharing" target="_blank" >RESUME</a></button></li>
+
+        	</div>
+        </nav>
+
+        <div id="container">
+        	<div class="titles_project">Safe Route</div>
+        	<div class="projectborder"> </div>
+        	<div class="category"><img src="./images/sfcategory.png"></div>
+
+        	<div class="description">
+        		<p style="width:50%">A Maps overlay that displays and identifies well-lit streets, foot traffic and the density of the streets, and safe routes to take to get to your destination.</p>
+
+        		<button class="viewprototype"><a href="https://www.notion.so/Safe-Routes-b68aa414918341fa910c7f19296415b1" target="_blank">view prototype</a></button>
+        	</div>
+
+<p><center><small>[ This portfolio coding is currently a work in progress ]</small></center></p>
+
+        </div> <!-- end container -->
+
+        <div id="featureimage">
+        	<video width="100%" height="100%" controls>
+  				<source src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fca8b903c-04dc-4393-9f6c-87ab85417baa%2FSafe_Routes.mp4?table=block&id=8d1fc932-bc61-4dbf-bfd4-3038aea1348a&spaceId=29e1ca6d-e85f-4cb5-8e15-8994db1e6a43&name=Safe_Routes.mp4&userId=4215a83f-da12-4bc6-b0ff-d2b3d9b9863e&cache=v2" type="video/mp4">
+  				<source src="movie.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+
+		<div id="container-sm"> <!-- smaller margin -->
+			<h3><center><i>for Columbia University Human-Centered Design and Innovation course final project</center></i></h3>
+
+			<div class="fourcol-boxes">
+				<h2>TEAM MEMBERS</h2><p></p>
+				Kate Majidzadeh,<br> Layla Alexander,<br> Lolo Dederer,<br> Sophie Reese-Wirpsa
+			</div>
+
+			<div class="time-boxes">
+				<h2>TIME</h2><p></p>
+				One month
+			</div>
+
+			<div class="fourcol-boxes">
+				<h2>SKILLS</h2> <p></p>
+				User research <br> HCD process <br> Product thinking <br> Wireframing Prototyping
+			</div>
+
+			<div class="toolkit-boxes">
+				<h2>TOOLKIT</h2> <p></p>
+				Google Slides,<br> Figma, <br> Goodnotes (sketching)
+			</div>
+		</div> <!-- end smaller margin -->
+
+		<div id="container">
+			<p> <center>For the final project of CU's Human-Centered Design & Innovation course, I was tasked with the final prompt. </center></p>
+
+			<h3><span class="hoverline">Design Challenge:</span></h3>
+			<div id="dsgnchallenge">
+				<div class="dsgn-title">💡</div>
+				<div class="dsgn-text">Improve the experience for users and others of new form of transportation in the City of New York. Engage with consumers, customers, citizens to uncover their needs and create an idea to help them. Think about what else is going on in New York City, in the US, in the world - culturally, technologically, competitively. Think about future changes we can anticipate. 
+				</div>
+			</div> <!-- end two-column -->
+
+		</div>
+		<div id="container-sm"> <!-- smaller margin -->
+			<h3><mark>People, Problems, and Ideas</mark></h3>
+		</div>
+		 <script>(function (document) {
+  const markers = [...document.querySelectorAll('mark')];
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.8
+  });
+  
+  markers.forEach(mark => {
+    observer.observe(mark);
+  });
+})(document);</script>
+
+		<div id="container">
+			<div id="two-column">
+				<div class="title-colmn"><h3 style="text-align: left;"><span class="hoverline">Opportunity Area</span></h3></div>
+				<div class="text-colmn">
+					<ul>
+						<li>Almost all <b>current solutions</b> implicitly place the responsibility of safety in public spaces on the <b>individual</b>
+							<ul>
+							<li>MTA/NY Subway website offer “safety tips,” but no information about what they’re doing to keep passengers/women safe.</li>
+							<li>Tracking/emergency call apps, taking self-defense classes, not wearing headphones, etc.</li>
+							</ul>
+					 	</li>
+
+						<li>There is an opportunity to <b>change the system that surrounds women</b> in public spaces instead of proposing small band-aid solutions that cost women extra time, energy, and money (and don’t work!)
+							<ul>
+								<li>What is the difference between feeling safe and actually being safe? How can we make a genuinely safer environment for women?</li>
+								<ul>
+									<li>e.g. many women take an Uber/Lyft to avoid riding the subway alone at night, but end up endangered by their driver/fellow passengers</li>
+								</ul>
+								<li>How can we shift the burden of personal safety from the individual to the community, city or MTA?</li>
+							</ul>
+						</li>
+					</ul>
+				</div> <!-- end text column -->
+			</div> <!-- end two column -->
+
+			<div class="twosquares">
+				<center>
+				<img src="./images/01.png">
+				<h4>What is the difference between feeling safe and actually being safe? How can we make a genuinely safer environment for women?</h4>
+				</center>
+			</div>
+			<div class="twosquares">
+				<center>
+				<img src="./images/02.png">
+				<h4>How can we shift the burden of personal safety from the individual to the community, city or MTA?</h4>
+				</center>
+			</div>
+
+
+			<div id="two-column">
+				<div class="title-colmn"><h3 style="text-align: left;"><span class="hoverline">Primary Research</span></h3></div>
+				<div class="text-colmn">
+					<ul>
+						<li>Majority of users interviewed said they “feel safer” with other people or when there are other people around
+							<ul>
+								<li>Feel like people are watching out for them</li>
+								<li>People feel societal pressures to not do anything unordinary/strange</li>
+							</ul>
+						</li>
+						<li>Users will give up efficiency for safety
+							<ul><li>Subway may be faster but at night but some users will opt for an uber/cab instead</li></ul>
+						</li>
+						<li>Hard to know if there will be other people on the subway with you
+							<ul><li>A few users shared that they may leave the subway after swiping in if there is no one else on the platform/train cars</li></ul>
+						</li>
+						<li>“I have had an equal amount of scary experiences on the train in the daylight.”
+							<ul>
+								<li>User feels more comfortable on the subway than walking at night</li>
+								<li>Time of day for taking the train does not matter</li>
+							</ul>
+					</ul>
+				</div>
+			</div>
+
+
+			<div id="two-column">
+				<div class="title-colmn"><h3 style="text-align: left;"><span class="hoverline">Secondary Research</span></h3></div>
+				<div class="text-colmn">
+					Women frequently feel uncomfortable or unsafe while traveling in New York. The harsh reality they have to face is that they are vulnerable to harassment or assault, whether as a pedestrian, by public transport, or when using rideshare apps and taxis.
+					
+					<h4>Attempting to "Travel Safely":</h4>
+					<ol type="1">
+						<li>Keep phones fully charged or bring backup power sources</li>
+						<li>Go into public establishments when you’re being followed</li>
+						<li> Call someone and keep them on the phone when walking alone, share location with multiple emergency contacts</li>
+						<li>Stick to well-lit areas and avoid “high crime” neighborhoods</li>
+						<li>Stay in crowded areas</li>
+						<li>Take self-defense courses</li>
+						<li>Take a taxi or rideshare at night</li>
+						<li>Always travel in groups and don’t go out after midnight</li>
+						<li>Scream if you’re attacked</li>
+					</ol>
+
+					These are the steps drilled into women -- whether by teachers, parents, [<a href="https://traveltips.usatoday.com/safe-travel-young-women-new-york-32463.html">opinion pieces</a>], the [<a href="https://www.nysubway.com/subway-station-safety-tips/">MTA’s official guidelines</a>], they are always expected to protect <b>themselves</b> and be on guard.
+
+					<h4>“Pink Tax” on Transportation</h4>
+
+					<ol>
+						<li>New York City’s women, on average, spend up to an additional $50 per month more on transportation than male resident</li>
+						<li><big>75%</big> of female vs 47% of male participants said they’d experienced harassment or theft on public transportation</li>
+						<li><big>29%</big> of women vs 8% of male participants said they avoid public transportation at night</li>
+					</ol>
+
+					<right>[<a href="https://nymag.com/intelligencer/2018/11/women-spend-more-money-on-transportation-in-nyc-than-men.htm](https://nymag.com/intelligencer/2018/11/women-spend-more-money-on-transportation-in-nyc-than-men.html">Source: NY Magazine</a>]</right>
+
+
+
+				</div>
+			</div>
+
+
+			<h3><span class="hoverline">Design Question:</span></h3>
+			<div id="dsgnchallenge">
+				<div class="dsgn-title">💡</div>
+				<div class="dsgn-text">How can we ensure women traveling through NYC are surrounded by those who would help them instead of harm them?
+				</div>
+			</div> <!-- end two-column -->
+		</div>  <!-- end container -->
+
+		<div id="container-sm">
+			<h3><mark>HCD Evaluation & Choice</mark></h3>
+					 <script>(function (document) {
+						  const markers = [...document.querySelectorAll('mark')];
+						  
+						  const observer = new IntersectionObserver(entries => {
+						    entries.forEach((entry) => {
+						      if (entry.intersectionRatio > 0) {
+						        entry.target.style.animationPlayState = 'running';
+						        observer.unobserve(entry.target);
+						      }
+						    });
+						  }, {
+						    threshold: 0.8
+						  });
+						  
+						  markers.forEach(mark => {
+						    observer.observe(mark);
+						  });
+						})(document);</script>
+		
+		<div class="threeboxes">
+			<center>
+			<img src="./images/1.png">
+			<h4>Interpersonal Solution</h4>
+			<h3>Buddy System App</h3>
+			</center>
+		</div>
+
+		<div class="threeboxes">
+			<center>
+			<img src="./images/2.png">
+			<h4>Community Solution</h4>
+			<h3>Safe Havens & Bystander Intervention</h3>
+			</center>
+		</div>
+
+		<div class="threeboxes">
+			<center>
+			<img src="./images/3.png">
+			<h4>Infrastructure Solution</h4>
+			<h3>Build Better Environments</h3>
+			</center>
+		</div>
+
+		</div> <!-- end small margin container -->
+
+		<div id="container">
+
+			<div id="two-column">
+				<div class="title-colmn">
+					<center>
+					<img src="./images/1.png">
+					<h4>Interpersonal Solution</h4>
+					<h3><span class="hoverline">Buddy System App</span></h3>
+					</center>
+				</div>
+				<div class="text-colmn" style="display: flex;
+    justify-content: center;
+    align-items: center;">
+		       	Many of our users said they feel safer when there are people around or prefer to travel in groups. One solution is to create an app that matches women traveling on similar routes through the city.
+				</div> <!-- end text column -->
+			</div> <!-- end two column -->
+
+			<div class="twosquares">
+				<center>
+				<h3><span class="hoverline">Pros</span></h3>
+
+				<ul style="text-align: left; line-height:27px">
+
+					<li>Gives users a sense of security as they would feel safer traveling through the city with another person</li>
+					<li>Companion present who is “responsible” for your safety (and you for theirs). Instead of relying on bystanders in passing, this would give you one other person who you could rely on during transportation.
+						<ul><li>
+					Users would not have use technology while out, instead other person is physically present. This allows the user to be more aware of their surroundings rather than having to be active on an app or phone call during travel.</li></ul>
+				</li>
+			</ul>
+				</center>
+			</div>
+			<div class="twosquares">
+				<center>
+				<h3><span class="hoverline">Cons</span></h3>
+
+				<ul style="text-align: left; line-height:27px">
+					<li>“Buddy” traveling with may not have the correct intentions. How would you filter people on the app? Would there have to be an application process with background checks?</li>
+					<li>Matches would not always be entirely perfect. Users may still have to walk an extra block alone.</li>
+					<li>Places burden of safety on users. Instead of fixing the challenge to a user’s safety (people who want to cause harm) this makes users responsible for their own safety.</li>
+					<li>While making people “feel safe” it does not guarantee safety. It is possible to still be assaulted in a group. Traveling with one other person does entirely prevent assaults.</li>
+				</ul>
+				</center>
+			</div>
+		</div> <!-- end container -->
+
+		<div id="container-sm">
+				<div class="box-desc">
+				<h4 style="display: inline-block; line-height:10px;">FORMAT: </h4> App <p>
+				<h4 style="display: inline-block; line-height:10px;">DESCRIPTION: </h4> Allows users to find people near them to travel to a destination with. <p>
+				<h4 style="display: inline-block; line-height:10px;">FEATURES: </h4> Syncs first degree and second degree mutuals, enables connectivity with other users. <p>
+			</div>
+			<div class="lg-image"><img src="./images/buddy.png"></div>
+		</div><!-- end small margin container -->
+
+		<div id="container">
+			<h3> User Feedback</h3>
+
+			<div id="two-column">
+				<div class="title-colmn">
+					<center>
+					<img src="./images/user1.png" height ="170px" >
+					</center>
+				</div>
+				<div class="text-colmn" style="display: flex;
+    				justify-content: center;
+    				align-items: center;">
+		       	<ul>
+		       		<li>One user did not like this design solution because it requires that she must plan in advance. She would already be out when she begins to feel unsafe so this would not be helpful.</li>
+					<li>User was concerned about the safety implications, specifically: being paired with a stranger when alone, having to walk to a meet point, distraction looking at phone.</li>
+					<li>One user said they could achieve a similar effect by calling people they feel closer to.</li>
+				</ul>
+				</div> <!-- end text column -->
+			</div> <!-- end two column -->
+
+			
+
+			<div id="proj2-two-column">
+				<div class="proj2-title-colmn">
+					<center>
+					<img src="./images/2.png">
+					<h4>Community Solution</h4>
+					<h3><span class="hoverline">Safe Havens & Bystander Intervention</span></h3>
+					</center>
+				</div>
+				<div class="proj2-text-colmn" style="display: flex;
+				    justify-content: center;
+				    align-items: center;">
+			       	<ul>
+			       		<li>Safe Havens: Establish a network of clearly-marked shops, pharmacies, etc. which will shelter people who feel threatened</li>
+						<li>Bystander Intervention: Provide training so bystanders can prevent, de-escalate, or report cases of Harassment and Assault</li>
+					</ul>
+				</div> <!-- end text column -->
+			</div>
+
+			<div class="twosquares">
+				<center>
+				<h3><span class="hoverline">Pros</span></h3>
+
+				<ul style="text-align: left; line-height:27px">
+					<li>These programs de-center individual responsibility, and instead provide a network of care to protect potential victims. Safe Havens and bystanders can remove women from threatening situations, halting potential emergencies.</li>
+				</ul>
+				</center>
+				<p>
+			</div>
+			<div class="twosquares">
+				<center>
+				<h3><span class="hoverline">Cons</span></h3>
+
+				<ul style="text-align: left; line-height:27px">
+					<li>These programs de-center individual responsibility, and instead provide a network of care to protect potential victims. Safe Havens and bystanders can remove women from threatening situations, halting potential emergencies.</li>
+				</ul>
+				</center>
+			</div>
+
+			<div class="longbox">
+				<h4 style="display: inline-block; line-height:10px;">FORMAT: </h4> App <p></p><br>
+				<h4 style="display: inline-block; line-height:10px;">DESCRIPTION: </h4> Allows users to find people near them to travel to a destination with. <p></p>
+			</div>
+
+			<div class="longbox">
+				<h4 style="display: inline-block; line-height:10px;">FEATURES: </h4> Syncs first degree and second degree mutuals, enables connectivity with other users. <p>
+			</div>
+
+			<h3> User Feedback</h3>
+
+			<div id="two-column">
+				<div class="title-colmn">
+					<center>
+					<img src="./images/user2.png" height ="170px" >
+					</center>
+				</div>
+				<div class="text-colmn" style="display: flex;
+    				justify-content: center;
+    				align-items: center;">
+		       	<ul>
+		       		<li>One user feels that it would be efficient if widely adopted and would like to see on average 2-3 businesses participating per block</li>
+					<li>One user is worried about the time it would take to find a safe haven when you’re in an emergency situation and wants them to be close to her route.</li>
+					<li>One user noted that the existing safe haven network would be better if it was applied throughout the city and if participating establishments remained open later or were open 24/7</li>
+				</ul>
+				</div> <!-- end text column -->
+			</div> <!-- end two column -->
+
+
+			<div id="proj2-two-column">
+				<div class="proj2-title-colmn">
+					<center>
+					<img src="./images/3.png">
+					<h4>Infrastructure Solution</h4>
+					<h3><span class="hoverline">SBuild Better Environments</span></h3>
+					</center>
+				</div>
+				<div class="proj2-text-colmn" style="display: flex;
+				    justify-content: center;
+				    align-items: center;">
+			       	It’s extremely important to create environments that women can feel safe while they’re commuting. Through our secondary and primary research we found that improving visibility and having more people around commuters makes them feel more safe.
+				</div> <!-- end text column -->
+			</div>
+
+			<div class="twosquares">
+				<center>
+				<h3><span class="hoverline">Pros</span></h3>
+
+				<ul style="text-align: left; line-height:27px">
+					<li>These programs de-center individual responsibility, and instead provide a network of care to protect potential victims. Safe Havens and bystanders can remove women from threatening situations, halting potential emergencies.</li>
+				</ul>
+				</center>
+				<p>
+			</div>
+			<div class="twosquares">
+				<center>
+				<h3><span class="hoverline">Cons</span></h3>
+
+				<ul style="text-align: left; line-height:27px">
+					<li>These programs de-center individual responsibility, and instead provide a network of care to protect potential victims. Safe Havens and bystanders can remove women from threatening situations, halting potential emergencies.</li>
+				</ul>
+				</center>
+			</div>
+
+		</div> <!-- end container -->
+
+</body>
+
+<footer>
+
+	<div id="footer_outer">
+
+	  <div class="footer_left"><span class="footerwelcome">welcome to my little <br>corner of the<span class="hoverline"> internet.</span></span></div>
+
+	  <div class="footer_about">
+
+	    Thank you so much for visiting my portfolio! You can learn more about me <a style="color:#9FC6FF;" href="./about.html"><strong>here</strong></a>. I’m also happy to chat! Say ‘hello’ at my <a style="color:#99FC6FF;" href="https://www.linkedin.com/in/joyce--jiang/"><b>LinkedIn</b></a> or my <a href="mailto:jj3115@columbia.edu">email.</a>
+
+	    <p><br>For more info on my work, here is my <a style ="color: #9FC6FF;" href="https://drive.google.com/file/d/1JXN2VnirjGYLSc2lFNW6RbAVI03nHZUC/view?usp=sharing" target="_blank" ><strong>resume.</strong></a></p>
+
+  	</div>
+
+  	<div id="links">
+  		<center>
+	      <a href="https://www.notion.so/Design-Portfolio-a91e1d477b0a4b939ae954a51578eff0" target="_blank"><span class="hoverline">ALL WORK ↗ </span></a>  &nbsp;&nbsp;
+
+	      <a href="https://www.notion.so/Photography-Portfolio-e105809b7dbf46ec9c722bb00ac4fc60" target="_blank"><span class="hoverline">PHOTOGRAPHY ↗ </span></a> &nbsp;&nbsp;
+
+	      <a href="./writing.html" target="_blank"><span class="hoverline"> WRITING ↗ </span></a> &nbsp;&nbsp;
+
+	      <a href="./aboutme.html" target="_blank"><span class="hoverline"> ABOUT ↗ </span></a>&nbsp;&nbsp;
+
+ 		</center>
+	</div>
+
+	<div id="creds">
+	    <center>
+	    <h3>Personally designed, coded, & developed with ❤️‍🔥</h3>
+	    <p style="font-size:12px; font-weight:200;">© 2022 Joyce Jiang. All Rights Reserved.</p>
+		</center>
+  	</div>
+
+</div>
+</footer>
+
+</html>
+
+
+
+
+
+
+
+

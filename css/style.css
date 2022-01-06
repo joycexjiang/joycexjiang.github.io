@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 ::-webkit-scrollbar-thumb:vertical {
   background-color:#eee;
   -moz-border-radius:10px;
@@ -11,8 +13,8 @@
 }
 
 @font-face {
-  font-family: "Ogg";
-  src: url(./fonts/Ogg.ttf) format("truetype");
+  font-family: 'Ogg', serif;
+  src: url(../fonts/Ogg.ttf) format("truetype");
 }
 
 body {
@@ -55,7 +57,7 @@ a:hover{
 
 .logo a{
   padding-top: 2%;
-  font-family: "Ogg";
+  font-family: 'Ogg', serif;
   color: black;
   font-size: 30px;
   font-weight: 400;
@@ -63,16 +65,16 @@ a:hover{
 }
 
 h1{
-  font-family: 'Ogg';
+  font-family: 'Ogg', serif;
   color: black;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 15px;
   cursor: url(http://i.imgur.com/2qleX.jpg), auto;
 }
 
 h2{
-  font-family: "Ogg";
+  font-family: 'Ogg', serif;
   color: black;
   font-size: 25px;
   font-weight: 400;
@@ -86,7 +88,7 @@ h3{
 }
 
 h4{
-  font-family: 'Ogg';
+  font-family: 'Ogg', serif;
   color: black;
   font-size: 30px;
   font-weight: 500;
@@ -94,7 +96,7 @@ h4{
 }
 
 h5{
-  font-family: 'Ogg';
+  font-family: 'Ogg', serif;
   color: black;
   font-size: 18px;
   font-weight: 400;
@@ -258,7 +260,7 @@ nav li a:hover{
 }
 
 .links{
-  font-family: "Ogg";
+  font-family: 'Ogg', serif;
   color: black;
   font-size: 14px;
   font-weight: 400;
@@ -354,7 +356,7 @@ hr{
 }
 
 .titles_project{
-  font-family: "Ogg";
+  font-family: 'Ogg', serif;
   color: black;
   font-size: 50px;
   font-weight: 400;
@@ -367,7 +369,7 @@ hr{
 }
 
 .titles_project-2column{
-  font-family: "Ogg";
+  font-family: 'Ogg', serif;
   color: black;
   border-bottom:  1px solid black;
   font-size: 50px;
@@ -560,7 +562,7 @@ hr{
 
 .footerwelcome{
   display: inline;
-  font-family: "Ogg";
+  font-family: 'Ogg', serif;
   font-size: 35px;
   line-height:30px;
 }
@@ -603,7 +605,7 @@ hr{
 }
 
 #links a{
-  font-family: "Ogg";
+  font-family: 'Ogg', serif;
   color: black;
   font-size: 15px;
   font-weight: 400;
@@ -934,7 +936,7 @@ hr{
 
   .footerwelcome{
     display: inline;
-    font-family: "Ogg";
+    font-family: 'Ogg', serif;
     font-size: 15px;
     line-height:20px;
   }
