@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'Ogg', serif;
-  src: url(../fonts/Ogg.ttf) format("truetype");
+  src: url("../fonts/Ogg.ttf") format("truetype");
 }
 
 body {
