@@ -441,9 +441,9 @@ hr{
 }
 
 .featuredpost img {
-  max-height: 400px;
-  margin-left: 7vw;
-  margin-top: 2vw;
+  max-height: 100px;
+  margin-left: 2vw;
+  margin-top: 2px;
   transition:800ms ease all;
 }
 
@@ -454,13 +454,13 @@ hr{
   transition:800ms ease all;
 }
 
-.featuredpost img: hover{
+.featuredpost: hover{
   margin-top: 6vw;
   transition:800ms ease all;
 }
 
 .featuredpostrow img {
-  max-height: 270px;
+  max-height: 400px;
   margin-top: 2vw;
   transition:800ms ease all;
 }
@@ -469,6 +469,14 @@ hr{
   margin-top: 16vw;
   transition:800ms ease all;
 }
+
+.covax img {
+  max-height: 430px;
+  margin-top: -2%;
+  margin-left: -5%;
+  transition:800ms ease all;
+}
+
 
 .tags {
   font-family: 'Space Mono', monospace;
@@ -554,7 +562,7 @@ hr{
 /* footer */
 
 #footer_outer{
-  margin-top: 750px;
+  margin-top: 60%;
   width: 100%;
   border-top: 1px solid black;
   padding: 5% 13% 0% 13%;
@@ -592,7 +600,7 @@ hr{
 #creds{
   text-align: center;
   display:block;
-  margin-top:220px;
+  margin-top:10%;
   line-height:5px;
   padding-bottom: 80px;
 }
@@ -600,7 +608,7 @@ hr{
 
 #links{
   text-align: right;
-  margin-top:20%;
+  margin-top:18%;
   line-height:5px;
 }
 
@@ -854,7 +862,7 @@ hr{
     width: 147px;
     height: 36px;
     font-size:  11px;
-    margin-top: 30%;
+    margin-top: 10%;
     margin-left: 60%;
   }
 
@@ -870,9 +878,9 @@ hr{
   }
 
   .featuredpost img {
-    max-height: 200px;
+    max-height: 50px;
     margin-left: -40%;
-    margin-top: -90%;
+    margin-top: -100%;
     z-index:  0.2;
   }
 
@@ -880,6 +888,13 @@ hr{
     max-height: 180px;
     margin-left: 35%;
     margin-top: -50%;
+    transition:800ms ease all;
+  }
+
+  .covax img {
+    max-width: 120%;
+    margin-top: 2%;
+    margin-left: -5%;
     transition:800ms ease all;
   }
 
