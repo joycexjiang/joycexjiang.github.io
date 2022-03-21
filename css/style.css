@@ -17,21 +17,32 @@
   src: url("../fonts/Ogg.ttf") format("truetype");
 }
 
+
+
 body {
-  background-image: url(../images/background.png);
+  background-image: url(../images/background.png); 
   background-position: center top;
   background-repeat: no-repeat;
-  background-width: 100% auto;
+  background-width: 100%;
   background-color: #FFFBFF;
   /*margin: auto;
   width: 80%;
   max-width: 1125px;
   min-width: 300px;*/
+  width: 100%;
   color: #161616;
   text-align: left;
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   cursor: url(http://i.imgur.com/2qleX.jpg), auto;
+}
+
+html { 
+  background: url(../images/background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 a{
@@ -297,10 +308,7 @@ hr{
 
 #featured {
   padding: 0% 13% 0% 10%;
-  padding: 10px;
-  cursor: move;
   z-index: 10;
-  background-color: #2196F3;
   color: #fff;
 }
 
